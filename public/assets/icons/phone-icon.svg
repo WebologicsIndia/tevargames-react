@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 48 48"
+        width="19"
+        height="23"
+        fill="none"
+>
+    <!-- Phone body (top) -->
+    <path
+            opacity="0.6"
+            d="M7.2 9.2C7.2 5.886 9.886 3.2 13.2 3.2H34.8C38.114 3.2 40.8 5.886 40.8 9.2V28H7.2V9.2Z"
+            fill="#FFD700"
+    />
+
+    <!-- Phone body (bottom + speaker) -->
+    <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M40.8 29.6H7.2V38.8C7.2 42.114 9.886 44.8 13.2 44.8H34.8C38.114 44.8 40.8 42.114 40.8 38.8V29.6ZM20 33.6C19.116 33.6 18.4 34.316 18.4 35.2C18.4 36.084 19.116 36.8 20 36.8H28C28.884 36.8 29.6 36.084 29.6 35.2C29.6 34.316 28.884 33.6 28 33.6H20Z"
+            fill="#FFD700"
+    />
+</svg>

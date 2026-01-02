@@ -1,171 +1,204 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../css/Login.css';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Input, Checkbox } from "antd";
+import {
+    ArrowLeftOutlined,
+    PhoneOutlined,
+    LockOutlined,
+    EyeInvisibleOutlined,
+    EyeTwoTone,
+    CustomerServiceOutlined,
+} from "@ant-design/icons";
+
+
 
 const Login = () => {
-  const navigate = useNavigate();
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberPassword, setRememberPassword] = useState(true);
-  const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = () => {
-    console.log('Login with:', phoneNumber, password);
-  };
+    return (
+        /* PHONE CONTAINER */
+        <div className="w-[390px] min-h-screen bg-(--bg_color_L1) text-(--text_color_L1)">
 
-  const handleForgotPassword = () => {
-    navigate('/forgot-password');
-  };
+            {/* SCROLLABLE CONTENT */}
+            <div className="px-[0.53333rem] pt-[0.26667rem] pb-[1.6rem]">
 
-  const handleRegister = () => {
-    navigate('/register');
-  };
-
-  const handleCustomerService = () => {
-    console.log('Contact customer service');
-  };
-
-  return (
-    <div className="login__container">
-      <div className="navbar main">
-        <div className="navbar-fixed">
-          <div className="navbar__content">
-            <div className="navbar__content-left" onClick={() => navigate(-1)}>
-              <svg className="svg-icon">
-                <use xlinkHref="#icon-arrow-left" />
-              </svg>
-            </div>
-            <div className="navbar__content-center">
-              <div className="headLogo" style={{ backgroundImage: 'url(/whitehjj.png)' }}></div>
-              <div className="navbar__content-title"></div>
-            </div>
-            <div className="navbar__content-right">
-              <div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="login__container-heading">
-        <h1 className="login__container-heading__title">Log in</h1>
-        <div className="login__container-heading__subTitle">
-          <div>Please log in with your phone number or email</div>
-          <div>If you forget your password, please contact customer service</div>
-        </div>
-      </div>
-
-      <div className="login_container-tab">
-        <div className="tab active">
-          <svg className="svg-icon icon-phone">
-            <use xlinkHref="#icon-phone"></use>
-          </svg>
-          <div>Log in with phone</div>
-        </div>
-      </div>
-
-      <div className="login__container-form">
-        <div className="tab-content activecontent">
-          <div className="signIn__container">
-            <div className="phoneInput__container">
-              <div className="phoneInput__container-label">
-                <svg className="svg-icon icon-phone">
-                  <use xlinkHref="#icon-phone"></use>
-                </svg>
-                <span>Phone number</span>
-              </div>
-              <div className="phoneInput__container-input">
-                <div className="dropdown">
-                  <div className="dropdown__value">
-                    <span>+91</span>
-                    <i className="van-badge__wrapper">
-                      <svg className="svg-icon">
-                        <use xlinkHref="#icon-arrow-down" />
-                      </svg>
-                    </i>
-                  </div>
+                {/* NAVBAR */}
+                <div className="h-[1.2rem] flex items-center">
+                    <ArrowLeftOutlined
+                        className="text-[0.6rem] cursor-pointer"
+                        onClick={() => navigate(-1)}
+                    />
+                    <img
+                        src="/whitehjj.png"
+                        alt="Logo"
+                        className="w-[3.98667rem] h-[3.12rem] object-contain mx-auto"
+                    />
                 </div>
-                <input
-                  id="phone_number_inp"
-                  type="text"
-                  name="userNumber"
-                  placeholder="Please enter the phone number"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                />
-              </div>
-            </div>
 
-            <div className="passwordInput__container">
-              <div className="passwordInput__container-label">
-                <svg className="svg-icon icon-editPswIcon passwordInput__container-label__icon">
-                  <use xlinkHref="#icon-editPswIcon"></use>
-                </svg>
-                <span>Password</span>
-              </div>
-              <div className="passwordInput__container-input">
-                <input
-                  id="password_inp"
-                  type={showPassword ? 'text' : 'password'}
-                  placeholder="Password"
-                  maxLength={32}
-                  autoComplete="new-password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <img
-                  id="password_eye_btn"
-                  src="/assets/png/eyeInvisible-821d9d16.png"
-                  className="eye"
-                  onClick={() => setShowPassword(!showPassword)}
-                  alt="Toggle password visibility"
-                />
-              </div>
-            </div>
+                {/* HEADING */}
+                <div className="min-h-[2.66667rem]">
+                    <h1 className="text-[0.42667rem] font-bold pt-[0.26667rem] text-(--text_color_L2)">
+                        Log in
+                    </h1>
 
-            <div>
-              <div
-                  role="checkbox"
-                  className={`van-checkbox ${rememberPassword ? 'van-checkbox--checked' : ''}`}
-                  onClick={() => setRememberPassword(!rememberPassword)}
-              >
-                <div className="van-checkbox__icon van-checkbox__icon--round"></div>
-                <span className="van-checkbox__label">Remember password</span>
-              </div>
+                    <div className="flex flex-col text-[0.29333rem] text-(--text_color_L2) mt-[0.29333rem] mb-[0.53333rem]">
+                        <span>Please log in with your phone number or email</span>
+                        <span>If you forget your password, please contact customer service</span>
+                    </div>
+                </div>
+
+                {/* TAB */}
+                <div className="flex justify-center mb-[0.74667rem]">
+                    <div className="flex flex-col items-center gap-[0.26667rem] py-[0.18667rem] border-b-[0.05333rem] border-(--main-color) text-(--main-color) text-[0.4rem] font-bold">
+                        <PhoneOutlined className="text-[0.64rem]" />
+
+                        {/*<PhoneIcon color={"--main-color"}  />*/}
+
+                        <span>Log in with phone</span>
+                    </div>
+                </div>
+
+                {/* PHONE INPUT */}
+                <div className="mb-[0.8rem]">
+                    <label className="flex items-center gap-[0.16rem] mb-[0.32rem] text-[0.4rem] text-(--main-color)">
+                        <PhoneOutlined className="text-[0.64rem]" />
+                        {/*<PhoneIcon color={"FFD700"}/>*/}
+                        Phone number
+                    </label>
+
+                    <div className="relative flex items-center gap-[0.24rem]">
+
+                        {/* COUNTRY CODE */}
+                        <div
+                            className="
+      absolute
+      left-0
+      z-10
+      flex
+      items-center
+      justify-around
+      min-w-[2.4rem]
+      h-[1.17333rem]
+      px-[0.26667rem]
+      rounded-[0.26667rem]
+      bg-[var(--bg_color_L1)]
+      text-[0.37333rem]
+      text-[var(--text_color_L2)]
+    "
+                        >
+                            <span>+91</span>
+                            <span>▼</span>
+                        </div>
+
+                        <Input
+                            placeholder="Please enter the phone number"
+                            className="
+      w-full
+      h-[1.17333rem]
+      pl-[2.93333rem]
+      pr-[0.34667rem]
+      py-[0.36rem]
+      text-[0.37333rem]
+      rounded-[0.26667rem]
+      bg-(--bg_color_L2)
+      text-(--text_color_L1)
+      placeholder:text-(--text_color_L3)
+      border-none
+    "
+                        />
+
+                    </div>
+                </div>
+
+                    {/* PASSWORD INPUT */}
+                <div className="mb-[0.53333rem]">
+                    <label className="flex items-center gap-[0.16rem] mb-[0.32rem] text-[0.4rem]">
+                        <LockOutlined className="text-[0.64rem]" />
+                        {/*<PasswordIcon color={"--main-color"}  />*/}
+                        Password
+                    </label>
+
+                    <Input
+                        type="password"
+                        placeholder="Password"
+                        iconRender={(visible) =>
+                            visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                        }
+                        className="
+    w-full
+    h-[1.17333rem]
+    px-[0.34667rem]
+    py-[0.36rem]
+    text-[0.37333rem]
+    rounded-[0.26667rem]
+    bg-(--bg_color_L2)
+    text-(--text_color_L1)
+    placeholder:text-(--text_color_L3)
+    border-none
+  "
+                    />
+
+                </div>
+
+                {/* REMEMBER */}
+                <div className="mb-[0.76rem]">
+                    <Checkbox className="text-[0.32rem] text-(--van-checkbox-label-color)">
+                        Remember password
+                    </Checkbox>
+                </div>
+
+                {/* BUTTONS */}
+                <div className="flex flex-col items-center mt-[0.76rem]">
+                    <button
+                        className="
+              w-[7.73333rem]
+              h-[1.06667rem]
+              rounded-[1.06667rem]
+              bg-(--main-color)
+              text-(--text_color_L4)
+              text-[0.48rem]
+              fontWeight700
+              tracking-[0.05333rem]
+            "
+                    >
+                        Log in
+                    </button>
+
+                    <button
+                        onClick={() => navigate("/register")}
+                        className="
+              w-[7.73333rem]
+              h-[1.06667rem]
+              mt-[0.53333rem]
+              rounded-[1.06667rem]
+              border-[0.01333rem]
+              border-(--main-color)
+              text-(--main-color)
+              text-[0.48rem]
+              font-bold
+            "
+                    >
+                        Register
+                    </button>
+                </div>
+
+                {/* FOOTER */}
+                <div className="flex justify-center mt-[0.77333rem] text-[0.32rem] text-(--main-color)">
+                    <div className="w-1/2 flex flex-col items-center">
+                        <LockOutlined className="text-[1.06667rem]" />
+                        <span className="mt-[0.21333rem]">Forgot password</span>
+                    </div>
+
+                    <div className="w-1/2 flex flex-col items-center">
+                        <CustomerServiceOutlined className="text-[1.06667rem]" />
+                        <span className="mt-[0.21333rem]">Customer Service</span>
+                    </div>
+                </div>
 
             </div>
-
-            <div className="signIn__container-button">
-              <button id="login_button" className="active" onClick={handleLogin}>
-                Log in
-              </button>
-              <button className="register" onClick={handleRegister}>
-                Register
-              </button>
-            </div>
-
-            <div className="signIn_footer">
-              <div className="forgetcon" onClick={handleForgotPassword}>
-                <svg className="svg-icon icon-clock_b forgetbg">
-                  <use xlinkHref="#icon-clock_b"></use>
-                </svg>
-                <div className="font24">Forgot password</div>
-              </div>
-              <div className="customcon" onClick={handleCustomerService}>
-                <svg className="svg-icon icon-customer_b forgetbg">
-                  <use xlinkHref="#icon-customer_b"></use>
-                </svg>
-                <div className="font24">Customer Service</div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div className="customer" id="customerId" onClick={handleCustomerService}>
-        <img src="/assets/png/icon_sevice-8a1f5628.png" alt="Customer Service" />
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Login;
