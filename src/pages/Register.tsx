@@ -47,6 +47,7 @@ const Register = () => {
                 <div className="flex justify-center mb-[0.74667rem]">
                     <div
                         className="
+                        w-full
               flex flex-col items-center gap-[0.26667rem] py-[0.18667rem]
               border-b-[0.05333rem] border-(--main-color)
               text-(--main-color)
@@ -213,7 +214,7 @@ const Register = () => {
     mt-[0.53333rem]
     rounded-[1.06667rem]
     border-[0.01333rem]
-    border-[var(--main-color)]
+    border-(--main-color)
     flex
     items-center
     justify-center

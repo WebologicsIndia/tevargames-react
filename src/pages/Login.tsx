@@ -50,7 +50,7 @@ const Login = () => {
 
                 {/* TAB */}
                 <div className="flex justify-center mb-[0.74667rem]">
-                    <div className="flex flex-col items-center gap-[0.26667rem] py-[0.18667rem] border-b-[0.05333rem] border-(--main-color) text-(--main-color) text-[0.4rem] font-bold">
+                    <div className="w-full flex flex-col items-center gap-[0.26667rem] py-[0.18667rem] border-b-[0.05333rem] border-(--main-color) text-(--main-color) text-[0.4rem] font-bold">
                         <PhoneOutlined className="text-[0.64rem]" />
 
                         {/*<PhoneIcon color={"--main-color"}  />*/}
@@ -82,9 +82,9 @@ const Login = () => {
       h-[1.17333rem]
       px-[0.26667rem]
       rounded-[0.26667rem]
-      bg-[var(--bg_color_L1)]
+      bg-(--bg_color_L1)
       text-[0.37333rem]
-      text-[var(--text_color_L2)]
+      text-(--text_color_L2)
     "
                         >
                             <span>+91</span>
