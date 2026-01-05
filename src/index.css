@@ -211,6 +211,7 @@
 
 :root {
   --main-color: #FFD700;
+  --main_gradient-color: linear-gradient(90deg, #FFD700 0%, #FFCC00 100%);
 
   --text_color_L1: #FFD700;
   --text_color_L2: #ACAFC2;
@@ -221,6 +222,7 @@
   --bg_color_L1: #000000;
   --bg_color_L2: #000000;
   --bg_color_L3: #374992;
+  --bg_color_main: #9195a3;
 
   --divider-color: #374992;
   --van-checkbox-label-color: #FFFFFF;
@@ -233,7 +235,7 @@ html, body {
     min-height: 100vh;
   display: flex;
     justify-content: center;
-  background: var(--bg_color_L1);
+  background: var(--bg_color_main);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Helvetica, Arial, sans-serif;
 }

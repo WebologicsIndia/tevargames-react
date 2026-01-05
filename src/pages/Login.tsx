@@ -185,9 +185,9 @@ const Login = () => {
 
                 {/* FOOTER */}
                 <div className="flex justify-center mt-[0.77333rem] text-[0.32rem] text-(--main-color)">
-                    <div className="w-1/2 flex flex-col items-center">
+                    <div className="w-1/2 flex flex-col items-center" onClick={() => navigate("/forgot_reset")}>
                         <LockOutlined className="text-[1.06667rem]" />
-                        <span className="mt-[0.21333rem]">Forgot password</span>
+                        <span className="mt-[0.21333rem]" >Forgot password</span>
                     </div>
 
                     <div className="w-1/2 flex flex-col items-center">
