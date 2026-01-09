@@ -1,0 +1,53 @@
+@reference "tailwindcss";
+
+/* ================= HEADER ================= */
+.app-header {
+    @apply h-[1.2rem]
+    flex items-center
+    px-[0.53333rem]
+    relative
+    bg-(--bg_color_L1);
+}
+
+/* Keeps logo visually centered */
+.header-left-space {
+    @apply w-[1.2rem];
+}
+
+/* ================= LOGO ================= */
+.header-logo-wrapper {
+    @apply absolute
+    left-[0.32rem]
+    top-[-0.6rem]
+    h-[200%]
+    flex
+    items-center
+    justify-center;
+}
+
+.header-logo {
+    @apply h-[1.9rem] object-contain;
+}
+
+/* ================= RIGHT ICONS ================= */
+.header-actions {
+    @apply ml-auto flex items-center gap-[0.26667rem];
+}
+
+.header-icon {
+    @apply w-[0.8rem]
+    h-[0.8rem]
+    rounded-full
+    flex
+    items-center
+    justify-center
+    cursor-pointer;
+}
+
+.header-icon-primary {
+    @apply bg-(--main-color)/20;
+}
+
+.header-icon-mail {
+    @apply text-[0.42667rem] text-(--main-color);
+}

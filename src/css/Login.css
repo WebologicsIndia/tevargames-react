@@ -98,12 +98,12 @@
 .van-checkbox__icon--round{border-radius:50%; background-color: var(--main-color);}
 .van-checkbox__icon{border:.02667rem solid var(--main-color)}
 .van-checkbox__icon--checked{color:#fff;background-color:var(--main-color);border-color:var(--main-color)}
-.van-checkbox__label{margin-left:.21333rem;color:var(--text_color_L1);line-height:.53333rem;font-size:.37333rem}
+.van-checkbox__label{margin-left:.21333rem;color:var(--van-checkbox-label-color);line-height:.53333rem;}
 .van-icon{position:relative;display:inline-block;font:normal normal normal .37333rem/1 vant-icon;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased}
 .van-icon-arrow-left:before{content:"\e6d9"}
 .van-icon-success:before{content:"\e78e"}
 .van-icon-arrow-down:before{content:"\e6db"}
-.svg-icon{width:1em;height:1em;fill:currentColor;overflow:hidden}
+.svg-icon{width:0.4rem;height:0.4rem;fill:currentColor;overflow:hidden}
 .icon-editPswIcon {height: 26px; width: 26px}
 
 .van-badge__wrapper {
