@@ -22,6 +22,8 @@ import SponserLogo4 from "/assets/svg/companyLogo_4.svg";
 import SponserLogo5 from "/assets/svg/companyLogo_5.svg";
 import SponserLogo6 from "/assets/svg/companyLogo_6.svg";
 import SponserLogo7 from "/assets/svg/adult18.svg";
+import NotificationPopup from "../../common/NotificationPopup";
+import {useState} from "react";
 
 
 const winners = [
@@ -64,7 +66,9 @@ const winners = [
 ];
 
 const Home = () => {
+    const [showPopup, setShowPopup] = useState(false);
     return (
+        <>
         <div className="home-container">
             <div className="home-content">
 
@@ -313,6 +317,11 @@ const Home = () => {
 
             </div>
         </div>
+            <NotificationPopup
+                open={showPopup}
+                onClose={() => setShowPopup(false)}
+            />
+            </>
 
     );
 };

@@ -5,6 +5,7 @@ import Home from './pages/Home/Home.tsx';
 import Register from './pages/Register/Register.tsx';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword.tsx';
 import AuthLayout from "./pages/Authlayout/AuthLayout.tsx";
+import Activity from "./pages/Activity/Activity.tsx";
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot_reset" element={<ForgotPassword />} />
           <Route element={<AuthLayout />}>
+
               <Route path="/home" element={<Home />} />
-              {/* add more later */}
+              <Route path="/activity" element={<Activity />} />
+
               {/* <Route path="/wallet" element={<Wallet />} /> */}
               {/* <Route path="/account" element={<Account />} /> */}
           </Route>

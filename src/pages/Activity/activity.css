@@ -1,0 +1,94 @@
+@reference "tailwindcss";
+
+    .activity-page {
+        @apply min-h-screen bg-black text-white px-4 pb-24;
+    }
+
+    /* HEADER */
+    .activity-header h1 {
+        @apply text-2xl font-semibold mb-2;
+    }
+
+    .activity-header p {
+        @apply text-sm text-gray-300 leading-relaxed;
+    }
+
+    /* ICON GRID */
+    .activity-icons {
+        @apply mt-8 grid grid-cols-4 gap-4 text-center;
+    }
+
+    .icon-item span {
+        @apply text-xs text-gray-300 mt-2 block leading-tight;
+    }
+
+    .icon-box {
+        @apply h-14 w-14 rounded-xl flex items-center justify-center text-2xl mx-auto;
+    }
+
+    .icon-box.pink {
+        @apply bg-gradient-to-br from-pink-400 to-rose-400;
+    }
+
+    .icon-box.orange {
+        @apply bg-gradient-to-br from-orange-400 to-yellow-400;
+    }
+
+    .icon-box.green {
+        @apply bg-gradient-to-br from-emerald-400 to-green-500;
+    }
+
+    .icon-box.purple {
+        @apply bg-gradient-to-br from-purple-400 to-indigo-500;
+    }
+
+    /* CARDS */
+    .activity-cards {
+        @apply mt-8 grid grid-cols-2 gap-4;
+    }
+
+    .activity-card {
+        @apply rounded-xl overflow-hidden bg-gradient-to-br from-orange-400 to-pink-500;
+    }
+
+    .card-image {
+        @apply h-28 flex items-center justify-center text-4xl;
+    }
+
+    .card-content {
+        @apply bg-black p-3;
+    }
+
+    .card-content h3 {
+        @apply text-yellow-400 font-semibold;
+    }
+
+    .card-content p {
+        @apply text-xs text-gray-300;
+    }
+
+    /* BANNER */
+    .activity-banner {
+        @apply mt-8 rounded-xl overflow-hidden;
+    }
+
+    .banner-top {
+        @apply bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-6;
+    }
+
+    .banner-top h2 {
+        @apply text-3xl font-extrabold text-yellow-400;
+    }
+
+    .banner-top p {
+        @apply text-white font-semibold;
+    }
+
+    .banner-top span {
+        @apply text-sm text-white;
+    }
+
+    .banner-bottom {
+        @apply bg-black px-4 py-3 flex justify-center items-center gap-2 text-yellow-400 font-semibold;
+    }
+
