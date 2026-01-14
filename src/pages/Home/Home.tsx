@@ -8,10 +8,8 @@ import {
     BellOutlined, BookOutlined,
     CustomerServiceOutlined,
     GlobalOutlined,
-    HomeOutlined, PhoneFilled,
+    PhoneFilled,
     SoundOutlined,
-    ThunderboltOutlined,
-
 } from "@ant-design/icons";
 import {GAME_CATEGORIES} from "./helper/gameCategory.ts";
 import EarningChart from "./helper/EarningChart";
@@ -24,6 +22,7 @@ import SponserLogo4 from "/assets/svg/companyLogo_4.svg";
 import SponserLogo5 from "/assets/svg/companyLogo_5.svg";
 import SponserLogo6 from "/assets/svg/companyLogo_6.svg";
 import SponserLogo7 from "/assets/svg/adult18.svg";
+
 
 const winners = [
     {
@@ -250,7 +249,7 @@ const Home = () => {
                     </div>
 
                     {/* PROVIDERS */}
-                    <div className="grid grid-cols-3 gap-4 px-6 px-[0.53333rem]">
+                    <div className="grid grid-cols-3 gap-[0.2rem] px-[0.53333rem]">
                         <ProviderCard icon={SponserLogo1} />
                         <ProviderCard icon={SponserLogo2} />
                         <ProviderCard icon={SponserLogo3} />
@@ -314,6 +313,7 @@ const Home = () => {
 
             </div>
         </div>
+
     );
 };
 
