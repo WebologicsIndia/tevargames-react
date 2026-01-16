@@ -1,94 +1,65 @@
 @reference "tailwindcss";
 
     .activity-page {
-        @apply min-h-screen bg-black text-white px-4 pb-24;
+        @apply mx-[0.32rem] mb-[10rem];
     }
 
-    /* HEADER */
-    .activity-header h1 {
-        @apply text-2xl font-semibold mb-2;
-    }
+  .activity-logo {
+    @apply w-[3.98667rem] object-contain mx-auto mt-[-0.6999rem];
 
-    .activity-header p {
-        @apply text-sm text-gray-300 leading-relaxed;
-    }
+}
+  .activity-header {
+      @apply text-(--van-checkbox-label-color)
+      text-[0.32rem]
+      mt-[-0.26667rem]
+  }
+
+  .activity-header h1{
+      @apply text-[0.48rem]
+  }
+
 
     /* ICON GRID */
     .activity-icons {
-        @apply mt-8 grid grid-cols-4 gap-4 text-center;
+        @apply flex items-start justify-between text-(--text_color_L2);
     }
 
-    .icon-item span {
-        @apply text-xs text-gray-300 mt-2 block leading-tight;
-    }
-
-    .icon-box {
-        @apply h-14 w-14 rounded-xl flex items-center justify-center text-2xl mx-auto;
-    }
-
-    .icon-box.pink {
-        @apply bg-gradient-to-br from-pink-400 to-rose-400;
-    }
-
-    .icon-box.orange {
-        @apply bg-gradient-to-br from-orange-400 to-yellow-400;
-    }
-
-    .icon-box.green {
-        @apply bg-gradient-to-br from-emerald-400 to-green-500;
-    }
-
-    .icon-box.purple {
-        @apply bg-gradient-to-br from-purple-400 to-indigo-500;
+    .icon-item {
+        @apply flex flex-col text-center  items-center w-[1.3333rem];
     }
 
     /* CARDS */
-    .activity-cards {
-        @apply mt-8 grid grid-cols-2 gap-4;
+    .activity-card-wrapper {
+        @apply flex justify-between mt-[0.2666rem] ;
     }
 
     .activity-card {
-        @apply rounded-xl overflow-hidden bg-gradient-to-br from-orange-400 to-pink-500;
-    }
-
-    .card-image {
-        @apply h-28 flex items-center justify-center text-4xl;
+        @apply flex flex-col rounded-xl w-[calc(50%-0.12rem)];
     }
 
     .card-content {
-        @apply bg-black p-3;
+        @apply flex flex-col px-[0.2666rem] py-[0.13333rem] gap-[0.2666rem]
     }
-
-    .card-content h3 {
-        @apply text-yellow-400 font-semibold;
+    .card-title {
+        @apply text-[0.37333rem] font-bold
     }
-
-    .card-content p {
-        @apply text-xs text-gray-300;
+    .card-description {
+        @apply text-(--text_color_L2);
     }
 
     /* BANNER */
-    .activity-banner {
-        @apply mt-8 rounded-xl overflow-hidden;
+    .activity-banner-wrapper {
+        @apply mt-[0.32rem] flex flex-col rounded-xl gap-[0.346667rem] ;
     }
 
-    .banner-top {
-        @apply bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-6;
-    }
+   .activity-banner {
+       @apply rounded-sm
+   }
+   .activity-banner-text {
+       @apply text-[0.4rem] font-semibold py-[0.24rem] px-[0.32rem];
+   }
 
-    .banner-top h2 {
-        @apply text-3xl font-extrabold text-yellow-400;
-    }
-
-    .banner-top p {
-        @apply text-white font-semibold;
-    }
-
-    .banner-top span {
-        @apply text-sm text-white;
-    }
-
-    .banner-bottom {
-        @apply bg-black px-4 py-3 flex justify-center items-center gap-2 text-yellow-400 font-semibold;
-    }
+   .activity-bottom-text{
+       @apply text-[0.4rem] font-bold py-[0.24rem] px-[0.32rem] text-(--text_color_L2);
+   }
 

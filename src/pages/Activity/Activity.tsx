@@ -1,10 +1,85 @@
 import "./activity.css";
 
+const activityIcon = [
+    {
+        name: "Activity Award",
+        imageUrl: "/assets/icons/activityReward.png",
+        navigation: "/activity-award"
+    },
+    {
+        name: "Betting Rebate",
+        imageUrl: "/assets/icons/BettingRebate.png",
+        navigation: "/betting-rebate"
+    },
+    {
+        name: "Super Jackpot",
+        imageUrl: "/assets/icons/superJackpot.png",
+        navigation: "/super-jackpot"
+    },
+    {
+        name: "New member gift package",
+        imageUrl: "/assets/icons/memberGift.png",
+        navigation: "/member-gift"
+    },
+]
+const activityCard = [
+    {
+        title: "Gifts",
+        description:"Enter the redemption code to receive gift rewards",
+        imageUrl: "/assets/images/signInBanner.png",
+        navigation: "/gifts"
+    },
+    {
+        title: "Attendance bonus",
+        description:"The more consecutive days you sign in, the higher the reward will be.",
+        imageUrl: "/assets/images/giftRedeem.png",
+        navigation: "/attendance-bonus"
+    },
+]
+const activityBanner = [
+    {
+        title: "💸 First Deposit Bonus 💸",
+        imageUrl: "/assets/activitybanner/activity-banner1.jpg",
+        navigation: ""
+    },
+    {
+        title: "🔥 New Hot Offer 🔥",
+        imageUrl: "/assets/activitybanner/activity-banner2.jpg",
+        navigation: ""
+    },
+    {
+        title: "💰 Get Daily Check-in Bonus 💰",
+        imageUrl: "/assets/activitybanner/activity-banner3.jpg",
+        navigation: ""
+    },
+    {
+        title: "🚀Aviator Fly High & Win Big🚀",
+        imageUrl: "/assets/activitybanner/activity-banner4.jpg",
+        navigation: ""
+    },
+    {
+        title: "▶️ Youtube Creative Video ▶️",
+        imageUrl: "/assets/activitybanner/activity-banner5.jpg",
+        navigation: ""
+    },
+    {
+        title: "✨Member Wingo Winning Streak✨",
+        imageUrl: "/assets/activitybanner/activity-banner6.jpg",
+        navigation: ""
+    },
+    {
+        title: "⚙️ Mission Bonus ⚙️",
+        imageUrl: "/assets/activitybanner/activity-banner7.jpg",
+        navigation: ""
+    },
+
+]
+
 const Activity = () => {
     return (
-        <div className="activity-page">
-            {/* HEADER */}
-            <div className="activity-header">
+        <div className={"activity-page"}>
+            <img src="/whitehjj.png" alt="Logo" className="activity-logo" />
+            <div className={"activity-header"}>
                 <h1>Activity</h1>
                 <p>
                     Please remember to follow the event page <br />
@@ -14,60 +89,39 @@ const Activity = () => {
 
             {/* ICON GRID */}
             <div className="activity-icons">
+                { activityIcon.map((item) => (
                 <div className="icon-item">
-                    <div className="icon-box pink">🏅</div>
-                    <span>Activity Award</span>
+                    <img alt={item.name} src={item.imageUrl} className={"pb-[0.29333rem]"}/>
+                    <span>{item.name}</span>
                 </div>
-
-                <div className="icon-item">
-                    <div className="icon-box orange">🎲</div>
-                    <span>Betting rebate</span>
-                </div>
-
-                <div className="icon-item">
-                    <div className="icon-box green">🏆</div>
-                    <span>Super Jackpot</span>
-                </div>
-
-                <div className="icon-item">
-                    <div className="icon-box purple">🎁</div>
-                    <span>New member gift package</span>
-                </div>
+                ))}
             </div>
 
             {/* CARDS */}
-            <div className="activity-cards">
-                <div className="activity-card">
-                    <div className="card-image">🧧</div>
-                    <div className="card-content">
-                        <h3>Gifts</h3>
-                        <p>Enter the redemption code to receive gift rewards</p>
+            <div className="activity-card-wrapper">
+                {activityCard.map((item) => (
+                    <div className="activity-card">
+                        <img alt={item.title} src={item.imageUrl}/>
+                        <div className="card-content">
+                            <text className={"card-title"}>{item.title}</text>
+                            <p className={"card-description"}>{item.description}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div className="activity-card">
-                    <div className="card-image">📅</div>
-                    <div className="card-content">
-                        <h3>Attendance bonus</h3>
-                        <p>
-                            The more consecutive days you sign in, the higher the reward will be.
-                        </p>
-                    </div>
-                </div>
+                ))}
             </div>
 
             {/* BANNER */}
-            <div className="activity-banner">
-                <div className="banner-top">
-                    <h2>EXTRA 100%</h2>
-                    <p>ON FIRST RECHARGE</p>
-                    <span>ONE-TIME ONLY!</span>
+            <div className="activity-banner-wrapper">
+            {activityBanner.map((item) => (
+                <div>
+                    <img alt={item.title} src={item.imageUrl} className="activity-banner"/>
+                    <div className="activity-banner-text">
+                        {item.title}
+                    </div>
                 </div>
-
-                <div className="banner-bottom">
-                    💰 <strong>First Deposit Bonus</strong> 💰
-                </div>
-            </div>
+            ))}
+             </div>
+            <div className="activity-bottom-text">No More</div>
         </div>
     );
 };
