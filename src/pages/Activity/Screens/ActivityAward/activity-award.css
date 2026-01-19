@@ -1,0 +1,97 @@
+@reference "tailwindcss";
+
+
+    .award-page {
+        @apply w-[10rem] min-h-screen bg-(--bg_color_L1) text-(--text_color_L1);
+    }
+
+    /* TOP BAR */
+    .award-topbar {
+        @apply flex h-[1.22667rem] text-(--main_color) mx-[0.32rem] justify-between;
+    }
+
+    .back-btn {
+        @apply text-[0.6rem] cursor-pointer;
+    }
+
+    .record-btn {
+        @apply flex items-center gap-1 text-[0.7rem];
+    }
+
+    /* BANNER */
+    .award-banner {
+        @apply flex  flex-col w-full h-[3.46667rem] px-[0.26667rem]
+            text-(--van-checkbox-label-color) mb-[0.4rem]
+        bg-[url("/assets/images/award_bg.png")]
+        bg-cover bg-center bg-no-repeat;
+    }
+
+    .banner-heading {
+        @apply text-[0.48rem] font-bold mt-[0.4rem];
+    }
+
+    .award-wrapper {
+        @apply flex flex-col gap-[0.26667rem] px-[0.26667rem]
+    }
+
+    .award-card {
+        @apply
+        pb-[0.13333rem] mb-[0.26667rem]
+    }
+
+    .card-header {
+        @apply flex items-center justify-between pr-[0.26667rem] text-[0.37333rem]
+    }
+    .card-header-title {
+        @apply  text-center font-bold bg-(--norm_green-color) rounded-br-[0.33333rem] rounded-tl-[0.33333rem] w-[3.46667rem] py-[0.2rem];
+    }
+
+    .card-bottom-line {
+        @apply relative content-[''] bottom-0 left-[40%]
+        w-[60%] h-[0.01333rem]
+        bg-(--Dividing-line_color);
+    }
+    .card-status-text{
+        @apply text-(--text_color_L5) text-[0.37333rem]
+    }
+
+    .recharge-bonus {
+        @apply flex mx-[0.26667rem] mt-[0.26667rem] items-center gap-[0.16667rem]
+    }
+    .recharge-bonus-title {
+        @apply text-(--text_color_L2);
+    }
+    .recharge-bonus-data {
+        @apply text-(--norm_red-color) text-[0.37333rem] font-normal
+    }
+
+    .award-card-description {
+        @apply p-[0.26667rem]
+        bg-(--bg_color_L3)
+        text-(--text_color_L2)
+        rounded-[0.13333rem]
+        m-[0.26667rem]
+        text-[0.29333rem]
+    }
+
+    .award-amount-wrapper {
+        @apply flex items-center justify-between mx-[0.26667rem] pb-[0.26667rem]
+        border-b-[0.01333rem] border-(--Dividing-line_color)
+    }
+
+    .award-amount-title{
+        @apply text-(--text_color_L2);
+    }
+    .award-amount-amount {
+        @apply flex gap-1
+    }
+    .award-amount-text{
+        @apply text-(--norm_secondary-color) text-[0.37333rem];
+    }
+    .button-wrapper {
+        @apply border-[0.01333rem] border-(--text_color_L1)
+        font-bold rounded-[0.53333rem] text-[0.4rem] text-center
+        py-[0.16rem] mx-[0.2rem] mt-[0.2666rem] mb-[0.1333rem]
+    }
+
+

@@ -6,6 +6,7 @@ import Register from './pages/Register/Register.tsx';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword.tsx';
 import AuthLayout from "./pages/Authlayout/AuthLayout.tsx";
 import Activity from "./pages/Activity/Activity.tsx";
+import ActivityAward from "./pages/Activity/Screens/ActivityAward";
 
 function App() {
   return (
@@ -21,9 +22,12 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/activity" element={<Activity />} />
 
+
               {/* <Route path="/wallet" element={<Wallet />} /> */}
               {/* <Route path="/account" element={<Account />} /> */}
           </Route>
+          <Route path="/dailytask" element={<ActivityAward />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -1,10 +1,11 @@
 import "./activity.css";
+import {useNavigate} from "react-router-dom";
 
 const activityIcon = [
     {
         name: "Activity Award",
         imageUrl: "/assets/icons/activityReward.png",
-        navigation: "/activity-award"
+        navigation: "/dailytask"
     },
     {
         name: "Betting Rebate",
@@ -76,6 +77,7 @@ const activityBanner = [
 ]
 
 const Activity = () => {
+    const navigate = useNavigate();
     return (
         <div className={"activity-page"}>
             <img src="/whitehjj.png" alt="Logo" className="activity-logo" />
@@ -90,7 +92,7 @@ const Activity = () => {
             {/* ICON GRID */}
             <div className="activity-icons">
                 { activityIcon.map((item) => (
-                <div className="icon-item">
+                <div className="icon-item" onClick={() => navigate(item.navigation)}>
                     <img alt={item.name} src={item.imageUrl} className={"pb-[0.29333rem]"}/>
                     <span>{item.name}</span>
                 </div>
