@@ -10,17 +10,17 @@ const activityIcon = [
     {
         name: "Betting Rebate",
         imageUrl: "/assets/icons/BettingRebate.png",
-        navigation: "/betting-rebate"
+        navigation: "/rebate"
     },
     {
         name: "Super Jackpot",
         imageUrl: "/assets/icons/superJackpot.png",
-        navigation: "/super-jackpot"
+        navigation: "/jackpot"
     },
     {
         name: "New member gift package",
         imageUrl: "/assets/icons/memberGift.png",
-        navigation: "/member-gift"
+        navigation: "/newGift"
     },
 ]
 const activityCard = [

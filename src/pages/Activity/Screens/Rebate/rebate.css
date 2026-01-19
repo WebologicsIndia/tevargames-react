@@ -1,0 +1,124 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.rebate-page {
+    @apply w-[10rem] min-h-screen bg-black text-white;
+}
+
+/* HEADER */
+.rebate-topbar {
+    @apply relative flex items-center h-[1.2rem] px-[0.32rem] text-yellow-400;
+}
+
+.back-btn {
+    @apply text-[0.6rem] cursor-pointer z-10;
+}
+
+.rebate-header {
+    @apply absolute left-1/2 -translate-x-1/2
+    text-[0.48rem] font-semibold;
+}
+
+/* TABS */
+.rebate-tabs {
+    @apply flex gap-[0.6rem] overflow-x-auto overflow-y-auto
+    whitespace-nowrap px-[0.32rem] mt-[0.4rem] touch-pan-x;
+}
+
+.rebate-tab {
+    @apply flex flex-col items-center shrink-0
+    text-[0.32rem]  min-w-[2.2rem]
+    opacity-70
+    select-none;
+}
+
+.rebate-tab-active {
+    @apply bg-yellow-400 text-black
+    px-[0.6rem] py-[0.3rem]
+    rounded-[0.16rem] opacity-100;
+}
+
+/* CONTENT */
+.rebate-section {
+    @apply px-[0.32rem] mt-[0.6rem];
+}
+
+.rebate-title {
+    @apply text-yellow-400 text-[0.4rem];
+}
+
+.realtime-badge {
+    @apply inline-flex items-center gap-[0.16rem]
+    border border-yellow-400
+    text-yellow-400 text-[0.28rem]
+    px-[0.24rem] py-[0.12rem]
+    rounded-[0.16rem] mt-[0.24rem];
+}
+
+.rebate-amount {
+    @apply mt-[0.3rem] text-yellow-400
+    text-[0.64rem] font-bold;
+}
+
+.vip-banner {
+    @apply mt-[0.32rem] bg-[#3E4A87]
+    px-[0.32rem] py-[0.28rem]
+    rounded-[0.16rem]
+    text-[0.28rem];
+}
+
+.rebate-cards {
+    @apply grid grid-cols-2 gap-[0.32rem] mt-[0.4rem];
+}
+
+.rebate-card {
+    @apply bg-[#3E4A87]
+    rounded-[0.16rem]
+    p-[0.32rem];
+}
+
+.rebate-card-label {
+    @apply text-[0.28rem] opacity-70;
+}
+
+.rebate-card-value {
+    @apply text-yellow-400 text-[0.4rem] font-semibold;
+}
+
+.rebate-note {
+    @apply mt-[0.32rem] text-[0.28rem] opacity-70;
+}
+
+.rebate-btn {
+    @apply mt-[0.5rem] bg-yellow-400 text-black
+    text-[0.4rem] py-[0.32rem]
+    rounded-full text-center font-medium;
+}
+
+/* HISTORY */
+.rebate-history {
+    @apply mt-[0.6rem] px-[0.32rem];
+}
+
+.rebate-history-title {
+    @apply text-yellow-400 text-[0.4rem]
+    border-l-[0.08rem] border-yellow-400
+    pl-[0.2rem];
+}
+
+.rebate-history-btn {
+    @apply mt-[0.4rem] border border-yellow-400
+    text-yellow-400 text-[0.32rem]
+    py-[0.28rem] rounded-full text-center;
+}
+
+.rebate-tabs::-webkit-scrollbar {
+    display: none;
+}
+.rebate-tabs {
+    scrollbar-width: none;
+}
+
+
+
+

@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
     .activity-page {
-        @apply mx-[0.32rem] mb-[10rem];
+        @apply mb-[10rem] px-[0.32rem];
     }
 
   .activity-logo {

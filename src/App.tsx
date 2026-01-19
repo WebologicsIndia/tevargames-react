@@ -7,6 +7,9 @@ import ForgotPassword from './pages/ForgotPassword/ForgotPassword.tsx';
 import AuthLayout from "./pages/Authlayout/AuthLayout.tsx";
 import Activity from "./pages/Activity/Activity.tsx";
 import ActivityAward from "./pages/Activity/Screens/ActivityAward";
+import Rebate from "./pages/Activity/Screens/Rebate/Rebate.tsx";
+import SuperJackpot from "./pages/Activity/Screens/SuperJackpot/SuperJackpot.tsx";
+import NewGift from "./pages/Activity/Screens/NewGift/NewGift.tsx";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
               {/* <Route path="/account" element={<Account />} /> */}
           </Route>
           <Route path="/dailytask" element={<ActivityAward />} />
+          <Route path="/rebate" element={<Rebate />} />
+          <Route path="/jackpot" element={<SuperJackpot />} />
+          <Route path="/newGift" element={<NewGift />} />
 
       </Routes>
     </BrowserRouter>

@@ -49,6 +49,9 @@ const activityAward = [
         description: "If your cumulative deposit reaches the maximum of 100,000 rupees on that day, you can claim the entire bonus"
     },
 ];
+
+//TODO: Reward History screen Needed
+
 const ActivityAward = () => {
     return (
         <div className={"award-page"}>
