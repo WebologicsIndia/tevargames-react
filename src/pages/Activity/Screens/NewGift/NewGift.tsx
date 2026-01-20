@@ -1,5 +1,6 @@
 import React from "react";
 import "./newGift.css"
+import {useNavigate} from "react-router-dom";
 
 const gift = [
     {
@@ -16,11 +17,12 @@ const gift = [
     },
 ]
 const NewGift = () => {
+    const navigate = useNavigate();
     return (
         <div className="newGift-page">
             {/* ================= TOP BAR ================= */}
             <div className="newGift-topbar">
-                <div className="newGift-back">‹</div>
+                <div className="newGift-back" onClick={() => navigate(-1)}>‹</div>
                 <div className="newGift-title">Activity details</div>
             </div>
 

@@ -1,5 +1,6 @@
 import "./activity-award.css";
 import {WalletFilled} from "@ant-design/icons";
+import {useNavigate} from "react-router-dom";
 
 
 const activityAward = [
@@ -53,11 +54,12 @@ const activityAward = [
 //TODO: Reward History screen Needed
 
 const ActivityAward = () => {
+   const navigate = useNavigate();
     return (
         <div className={"award-page"}>
             {/* TOP BAR */}
             <div className="award-topbar">
-                <button className="back-btn">←</button>
+                <button className="back-btn" onClick={() => navigate(-1)}>←</button>
                 <div className="record-btn">
                     ⏱ <span className="text-[0.35rem]">Collection record</span>
                 </div>
