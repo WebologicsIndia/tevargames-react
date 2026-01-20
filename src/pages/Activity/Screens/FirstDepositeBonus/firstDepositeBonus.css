@@ -55,8 +55,8 @@
 }
 
 .fdb-btn {
-    @apply border border-yellow-400
-    text-yellow-400
+    @apply border border-(--norm_secondary-color)
+    text-(--norm_secondary-color)
     px-[0.48rem] py-[0.2rem]
     rounded-[0.2rem]
     text-[0.32rem];
