@@ -28,13 +28,13 @@ const activityCard = [
         title: "Gifts",
         description:"Enter the redemption code to receive gift rewards",
         imageUrl: "/assets/images/signInBanner.png",
-        navigation: "/gifts"
+        navigation: "/redenvelopes"
     },
     {
         title: "Attendance bonus",
         description:"The more consecutive days you sign in, the higher the reward will be.",
         imageUrl: "/assets/images/giftRedeem.png",
-        navigation: "/attendance-bonus"
+        navigation: "/attendance"
     },
 ]
 const activityBanner = [
@@ -102,7 +102,7 @@ const Activity = () => {
             {/* CARDS */}
             <div className="activity-card-wrapper">
                 {activityCard.map((item) => (
-                    <div className="activity-card">
+                    <div className="activity-card" onClick={() => navigate(item.navigation)}>
                         <img alt={item.title} src={item.imageUrl}/>
                         <div className="card-content">
                             <text className={"card-title"}>{item.title}</text>

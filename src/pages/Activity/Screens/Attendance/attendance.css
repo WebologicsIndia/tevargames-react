@@ -1,0 +1,130 @@
+@reference "tailwindcss";
+/* PAGE */
+.attendance-page {
+    @apply w-[10rem] min-h-screen bg-black text-white;
+}
+
+/* TOP BAR */
+.attendance-topbar {
+    @apply relative flex items-center
+    h-[1.2rem]
+    px-[0.32rem]
+    text-yellow-400;
+}
+
+.attendance-back {
+    @apply text-[0.6rem] cursor-pointer z-10;
+}
+
+.attendance-title {
+    @apply absolute left-1/2 -translate-x-1/2
+    text-[0.48rem] font-semibold;
+}
+
+/* HEADER */
+.attendance-header {
+    @apply px-[0.4rem] py-[0.26667rem] mb-[0.42667rem]
+    h-[6.1333rem];
+    background:
+            url("/assets/images/headerBg_Attendance.png") no-repeat center/cover,
+            #F54545 no-repeat center/cover;
+}
+
+.attendance-header-content h1 {
+    @apply text-[0.53333rem] mb-0;
+}
+
+.attendance-header-content p {
+    @apply w-[5.3333rem] overflow-hidden wrap-break-word
+}
+
+/* BADGE */
+.attendance-badge {
+    @apply mt-[0.21333rem] flex flex-col
+        w-[4.9rem]
+    bg-white text-red-500
+    px-[0.13767rem] py-[0.13333rem]
+    text-[0.37333rem] font-medium
+    relative;
+}
+
+.attendance-badge span {
+    @apply text-[0.48rem] font-bold;
+}
+
+/* ACCUMULATED */
+.attendance-acc {
+    @apply mt-[0.4rem] text-[0.36rem];
+}
+
+.attendance-acc strong {
+    @apply block text-[0.56rem] font-bold;
+}
+
+/* HEADER BUTTONS */
+.attendance-header-actions {
+    @apply mt-[0.48rem] flex justify-between;
+}
+
+.attendance-header-actions button {
+    @apply bg-yellow-400 text-white
+    px-[0.48rem] py-[0.24rem]
+    rounded-full text-[0.32rem];
+}
+
+/* GRID */
+.attendance-grid {
+    @apply grid grid-cols-3 gap-[0.2rem]
+    mt-[0.6rem] px-[0.32rem];
+}
+
+.attendance-item {
+    @apply flex flex-col items-center gap-1;
+}
+
+.attendance-coin {
+    @apply w-[1.2rem] h-[1.2rem]
+    bg-center bg-contain bg-no-repeat;
+}
+
+.attendance-amount {
+    @apply mt-[0.24rem] text-yellow-400
+    text-[0.4rem] font-semibold;
+}
+
+.attendance-day {
+    @apply mt-[0.08rem] text-[0.32rem] opacity-70;
+}
+
+/* DAY 7 */
+.attendance-day7 {
+    @apply mt-[0.8rem] flex justify-center items-center
+    gap-[0.4rem];
+}
+
+.attendance-day7 img {
+    @apply h-[2.45333rem] w-[3.57333rem]
+}
+
+.attendance-day7-text {
+    @apply flex flex-col items-center;
+}
+
+.attendance-day7-text .amount {
+    @apply text-yellow-400 text-[0.48rem] font-semibold;
+}
+
+.attendance-day7-text .day {
+    @apply text-[0.36rem] opacity-70;
+}
+
+/* CTA */
+.attendance-cta {
+    @apply mt-[1rem] px-[0.32rem];
+}
+
+.attendance-cta button {
+    @apply w-full bg-yellow-400 text-black
+    text-[0.48rem] py-[0.36rem]
+    rounded-full font-medium;
+}

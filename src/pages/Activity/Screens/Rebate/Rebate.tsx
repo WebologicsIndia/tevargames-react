@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./rebate.css";
+import {useNavigate} from "react-router-dom";
 
 const tabs = [
     { id: "all", label: "All", icon: "⬛⬛" },
@@ -10,12 +11,13 @@ const tabs = [
 
 const Rebate = () => {
     const [activeTab, setActiveTab] = useState("all");
+    const navigate = useNavigate();
 
     return (
         <div className="rebate-page">
             {/* ================= HEADER ================= */}
             <div className="rebate-topbar">
-                <div className="back-btn">‹</div>
+                <div className="back-btn" onClick={() => navigate(-1)}>‹</div>
                 <div className="rebate-header">Rebate</div>
             </div>
 

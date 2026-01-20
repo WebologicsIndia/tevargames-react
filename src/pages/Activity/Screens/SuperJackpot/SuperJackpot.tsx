@@ -1,12 +1,14 @@
 import React from "react";
 import "./superJackpot.css"
+import {useNavigate} from "react-router-dom";
 
 const SuperJackpot = () => {
+    const navigator = useNavigate();
     return (
         <div className="superjackpot-page">
             {/* ================= HEADER ================= */}
             <div className="sj-topbar">
-                <div className="sj-back">‹</div>
+                <div className="sj-back" onClick={() => navigator(-1)}>‹</div>
                 <div className="sj-title">Super Jackpot</div>
             </div>
 

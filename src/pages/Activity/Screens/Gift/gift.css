@@ -1,0 +1,99 @@
+@reference "tailwindcss";
+/* PAGE */
+.gift-page {
+    @apply w-[10rem] min-h-screen bg-black text-white;
+}
+
+/* HEADER */
+.gift-topbar {
+    @apply relative flex items-center
+    h-[1.2rem]
+    px-[0.32rem]
+    text-yellow-400;
+}
+
+.gift-back {
+    @apply text-[0.6rem] cursor-pointer z-10;
+}
+
+.gift-title {
+    @apply absolute left-1/2 -translate-x-1/2
+    text-[0.48rem] font-semibold;
+}
+
+/* HERO */
+.gift-hero {
+    @apply w-full h-[3.6rem]
+    bg-center bg-no-repeat bg-cover;
+    background-image: url("/assets/images/gift-activity.png");
+}
+
+/* CONTENT */
+.gift-content {
+    @apply px-[0.48rem] mt-[0.6rem];
+}
+
+.gift-hi {
+    @apply text-[0.4rem] text-gray-300;
+}
+
+.gift-desc {
+    @apply text-[0.44rem] mt-[0.12rem];
+}
+
+.gift-label {
+    @apply mt-[0.6rem]
+    text-yellow-400
+    text-[0.36rem];
+}
+
+.gift-input {
+    @apply mt-[0.32rem]
+    w-full
+    bg-transparent
+    border-b border-gray-600
+    text-[0.4rem]
+    py-[0.24rem]
+    outline-none
+    placeholder-gray-500;
+}
+
+.gift-receive {
+    @apply mt-[0.6rem]
+    w-full
+    bg-yellow-400
+    text-black
+    text-[0.44rem]
+    py-[0.36rem]
+    rounded-full
+    font-medium;
+}
+
+/* HISTORY */
+.gift-history {
+    @apply mt-[0.8rem] px-[0.48rem];
+}
+
+.gift-history-title {
+    @apply flex items-center gap-[0.24rem]
+    text-yellow-400
+    text-[0.4rem];
+}
+
+.gift-empty {
+    @apply mt-[0.8rem]
+    flex flex-col items-center
+    opacity-70;
+}
+
+.gift-empty-art {
+    @apply w-[3.2rem] h-[2.4rem]
+    bg-white/10
+    rounded-[0.24rem];
+}
+
+.gift-empty p {
+    @apply mt-[0.32rem]
+    text-[0.36rem]
+    text-gray-400;
+}
