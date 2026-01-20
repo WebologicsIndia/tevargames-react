@@ -1,0 +1,95 @@
+@reference "tailwindcss";
+/* PAGE */
+.fdb-page {
+    @apply w-[10rem] min-h-screen bg-black text-white;
+}
+
+/* TOP BAR */
+.fdb-topbar {
+    @apply relative flex items-center
+    h-[1.2rem]
+    px-[0.32rem]
+    text-yellow-400;
+}
+
+.fdb-back {
+    @apply text-[0.6rem] cursor-pointer z-10;
+}
+
+.fdb-title {
+    @apply absolute left-1/2 -translate-x-1/2
+    text-[0.48rem] font-semibold;
+}
+
+/* LIST */
+.fdb-list {
+    @apply mt-[0.4rem] px-[0.32rem] space-y-[0.6rem];
+}
+
+.fdb-item {
+    @apply space-y-[0.24rem];
+}
+
+.fdb-row {
+    @apply flex justify-between gap-[0.4rem];
+}
+
+.fdb-left {
+    @apply flex-1;
+}
+
+.fdb-heading {
+    @apply text-yellow-400 text-[0.4rem] font-medium;
+}
+
+.fdb-desc {
+    @apply mt-[0.12rem] text-[0.32rem] text-gray-400;
+}
+
+.fdb-right {
+    @apply flex flex-col items-end gap-[0.24rem];
+}
+
+.fdb-bonus {
+    @apply text-(--norm_secondary-color) text-[0.4rem];
+}
+
+.fdb-btn {
+    @apply border border-yellow-400
+    text-yellow-400
+    px-[0.48rem] py-[0.2rem]
+    rounded-[0.2rem]
+    text-[0.32rem];
+}
+
+/* PROGRESS */
+.fdb-progress {
+    @apply  w-[70%] h-[0.32rem]
+    bg-gray-200 rounded-full overflow-hidden;
+}
+
+.fdb-progress-fill {
+    @apply h-full bg-red-400 rounded-full;
+}
+
+/* RULES */
+.fdb-rules {
+    @apply mt-[0.8rem] px-[0.32rem] pb-[0.8rem];
+}
+
+.fdb-rules h3 {
+    @apply text-center text-[0.48rem] font-semibold mb-[0.4rem];
+}
+
+.fdb-rules ul {
+    @apply space-y-[0.32rem] text-[0.34rem] text-gray-400;
+}
+
+.fdb-rules li {
+    @apply flex gap-[0.24rem];
+}
+
+.fdb-rules li::before {
+    content: "◆";
+    @apply text-yellow-400;
+}

@@ -41,7 +41,7 @@ const activityBanner = [
     {
         title: "💸 First Deposit Bonus 💸",
         imageUrl: "/assets/activitybanner/activity-banner1.jpg",
-        navigation: ""
+        navigation: "/first_deposit_bonus"
     },
     {
         title: "🔥 New Hot Offer 🔥",
@@ -51,7 +51,7 @@ const activityBanner = [
     {
         title: "💰 Get Daily Check-in Bonus 💰",
         imageUrl: "/assets/activitybanner/activity-banner3.jpg",
-        navigation: ""
+        navigation: "/attendance"
     },
     {
         title: "🚀Aviator Fly High & Win Big🚀",
@@ -71,7 +71,7 @@ const activityBanner = [
     {
         title: "⚙️ Mission Bonus ⚙️",
         imageUrl: "/assets/activitybanner/activity-banner7.jpg",
-        navigation: ""
+        navigation: "/dailytask"
     },
 
 ]
@@ -115,7 +115,7 @@ const Activity = () => {
             {/* BANNER */}
             <div className="activity-banner-wrapper">
             {activityBanner.map((item) => (
-                <div>
+                <div onClick={() => navigate(item.navigation)}>
                     <img alt={item.title} src={item.imageUrl} className="activity-banner"/>
                     <div className="activity-banner-text">
                         {item.title}

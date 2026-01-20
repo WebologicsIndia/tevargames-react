@@ -12,6 +12,7 @@ import SuperJackpot from "./pages/Activity/Screens/SuperJackpot/SuperJackpot.tsx
 import NewGift from "./pages/Activity/Screens/NewGift/NewGift.tsx";
 import Gift from "./pages/Activity/Screens/Gift/Gift.tsx";
 import Attendance from "./pages/Activity/Screens/Attendance/Attendance.tsx";
+import FirstDepositBonus from "./pages/Activity/Screens/FirstDepositeBonus/FirstDepositeBonus.tsx";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/newGift" element={<NewGift />} />
           <Route path="/redenvelopes" element={<Gift />} />
           <Route path="/attendance" element={<Attendance />} />
+          <Route path="/first_deposit_bonus" element={<FirstDepositBonus />} />
 
       </Routes>
     </BrowserRouter>
