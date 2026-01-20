@@ -1,6 +1,20 @@
 import React from "react";
 import "./newGift.css"
 
+const gift = [
+    {
+        "Condition": "First deposit for new users",
+        "Next day Bonus": "Total negative profit rebate for the day",
+        percentage: "30%",
+        "Bonus limit": "RS200.00"
+    },
+    {
+        "Condition": "First deposit for new users",
+        "Next day Bonus": "Total negative profit rebate for the day",
+        percentage: "30%",
+        "Bonus limit": "RS200.00"
+    },
+]
 const NewGift = () => {
     return (
         <div className="newGift-page">
@@ -48,14 +62,17 @@ const NewGift = () => {
             </div>
 
             {/* ================= INFO VALUES ================= */}
-            <div className="newGift-info-values">
-                <div>First deposit for new users</div>
-                <div>
-                    Total negative profit rebate for the day
-                    <span className="highlight">30%</span>
+            {gift.map((item) =>(
+                <div className="newGift-info-values">
+                    <div className="pt-[0.6rem]">{item.Condition}</div>
+                    <div className="line">
+                        {item["Next day Bonus"]}
+                        <span className="highlight">{item.percentage}</span>
+                    </div>
+                    <div className="highlight pt-[0.6rem]">{item["Bonus limit"]}</div>
                 </div>
-                <div className="highlight">Rs200.00</div>
-            </div>
+            ))}
+
 
             {/* ================= NOTICE ================= */}
             <div className="newGift-notice">
