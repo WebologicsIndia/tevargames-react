@@ -13,6 +13,10 @@ import NewGift from "./pages/Activity/Screens/NewGift/NewGift.tsx";
 import Gift from "./pages/Activity/Screens/Gift/Gift.tsx";
 import Attendance from "./pages/Activity/Screens/Attendance/Attendance.tsx";
 import FirstDepositBonus from "./pages/Activity/Screens/FirstDepositeBonus/FirstDepositeBonus.tsx";
+import NewHotOffer from "./pages/Activity/Screens/NewHotOffer/NewHotOffer.tsx";
+import AviatorOffer from "./pages/Activity/Screens/NewHotOffer/AviaterOffer.tsx";
+import YoutubeCreator from "./pages/Activity/Screens/NewHotOffer/YoutubeCreator.tsx";
+import WinzoOffer from "./pages/Activity/Screens/NewHotOffer/WinzoOffer.tsx";
 
 function App() {
   return (
@@ -39,6 +43,10 @@ function App() {
           <Route path="/redenvelopes" element={<Gift />} />
           <Route path="/attendance" element={<Attendance />} />
           <Route path="/first_deposit_bonus" element={<FirstDepositBonus />} />
+          <Route path="/newHot" element={<NewHotOffer />} />
+          <Route path="/aviator_betting_reward" element={<AviatorOffer />} />
+          <Route path="/youtube" element={<YoutubeCreator />} />
+          <Route path="/winzo" element={<WinzoOffer />} />
 
       </Routes>
     </BrowserRouter>

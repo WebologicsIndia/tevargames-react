@@ -46,7 +46,7 @@ const activityBanner = [
     {
         title: "🔥 New Hot Offer 🔥",
         imageUrl: "/assets/activitybanner/activity-banner2.jpg",
-        navigation: ""
+        navigation: "/newHot"
     },
     {
         title: "💰 Get Daily Check-in Bonus 💰",
@@ -56,17 +56,17 @@ const activityBanner = [
     {
         title: "🚀Aviator Fly High & Win Big🚀",
         imageUrl: "/assets/activitybanner/activity-banner4.jpg",
-        navigation: ""
+        navigation: "/aviator_betting_reward"
     },
     {
         title: "▶️ Youtube Creative Video ▶️",
         imageUrl: "/assets/activitybanner/activity-banner5.jpg",
-        navigation: ""
+        navigation: "/youtube"
     },
     {
         title: "✨Member Wingo Winning Streak✨",
         imageUrl: "/assets/activitybanner/activity-banner6.jpg",
-        navigation: ""
+        navigation: "/winzo"
     },
     {
         title: "⚙️ Mission Bonus ⚙️",
