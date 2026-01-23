@@ -1,0 +1,53 @@
+/* container */
+.tabbar__container {
+  @apply fixed bottom-0 left-1/2 -translate-x-1/2 flex items-end w-[10rem] h-[1.73333rem] pb-[0.13333rem] text-[0.29333rem] z-[1000] bg-no-repeat bg-center bg-cover;
+  background-image: url('/assets/images/tabBarBg.png');
+}
+
+/* items */
+.tabbar__container-item {
+  @apply flex-1 flex flex-col items-center justify-end gap-[0.12rem];
+  color: var(--van-checkbox-label-color);
+}
+
+/* icons */
+.tabbar__container-item svg {
+  @apply w-[0.5776rem] h-[0.59387rem];
+}
+
+/* active */
+.tabbar__container-item.active {
+  color: var(--main-color);
+}
+
+/* center (promotion) */
+.tabbar__container-item:nth-of-type(3) {
+  @apply relative;
+}
+
+.tabbar__container-item:nth-of-type(3) svg {
+  @apply relative top-[-0.4rem] w-[0.75rem] h-[0.65rem] z-[3];
+}
+
+.promotionBg {
+  @apply absolute left-1/2 -translate-x-1/2 bottom-[0.53333rem] w-[1.46667rem] h-[1.46667rem] rounded-full bg-[#374992] z-[2];
+  box-shadow: 0 -0.08rem 0.16rem #d0d0ed80;
+}
+
+.promotionBg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.36rem;
+  height: 1.36rem;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #374992 0%, #374992 100%);
+}
+
+/* mobile */
+@media screen and (max-width: 500px) {
+  .tabbar__container {
+    @apply w-full left-0 translate-x-0;
+  }
+}

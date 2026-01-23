@@ -1,0 +1,65 @@
+.activity-page {
+  @apply mb-[10rem] px-[0.32rem];
+}
+
+.activity-logo {
+  @apply w-[3.98667rem] object-contain mx-auto mt-[-0.6999rem];
+}
+
+.activity-header {
+  @apply text-[0.32rem] mt-[-0.26667rem];
+  color: var(--van-checkbox-label-color);
+}
+
+.activity-header h1 {
+  @apply text-[0.48rem];
+}
+
+/* ICON GRID */
+.activity-icons {
+  @apply flex items-start justify-between;
+  color: var(--text_color_L2);
+}
+
+.icon-item {
+  @apply flex flex-col text-center items-center w-[1.3333rem] cursor-pointer;
+}
+
+/* CARDS */
+.activity-card-wrapper {
+  @apply flex justify-between mt-[0.2666rem];
+}
+
+.activity-card {
+  @apply flex flex-col rounded-xl w-[calc(50%-0.12rem)] cursor-pointer;
+}
+
+.card-content {
+  @apply flex flex-col px-[0.2666rem] py-[0.13333rem] gap-[0.2666rem];
+}
+
+.card-title {
+  @apply text-[0.37333rem] font-bold;
+}
+
+.card-description {
+  color: var(--text_color_L2);
+}
+
+/* BANNER */
+.activity-banner-wrapper {
+  @apply mt-[0.32rem] flex flex-col rounded-xl gap-[0.346667rem];
+}
+
+.activity-banner {
+  @apply rounded-sm cursor-pointer;
+}
+
+.activity-banner-text {
+  @apply text-[0.4rem] font-semibold py-[0.24rem] px-[0.32rem];
+}
+
+.activity-bottom-text {
+  @apply text-[0.4rem] font-bold py-[0.24rem] px-[0.32rem];
+  color: var(--text_color_L2);
+}

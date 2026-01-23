@@ -1,0 +1,40 @@
+.notification-overlay {
+  @apply fixed inset-0 z-[9999] flex items-center justify-center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.notification-modal {
+  @apply w-[8rem] max-h-[80vh] rounded-[0.4rem] p-[0.4rem] overflow-y-auto;
+  background-color: var(--bg_color_L2);
+}
+
+.notification-title {
+  @apply text-[0.48rem] font-bold text-center mb-[0.32rem];
+  color: var(--main-color);
+}
+
+.notification-content {
+  @apply text-[0.32rem] leading-relaxed;
+  color: var(--text_color_L2);
+}
+
+.notification-content .highlight {
+  @apply mb-[0.32rem] p-[0.26667rem] rounded-[0.26667rem];
+  background-color: var(--bg_color_L3);
+  color: var(--main-color);
+}
+
+.notification-content .text {
+  @apply mb-[0.26667rem];
+}
+
+.notification-content .link {
+  color: var(--main-color);
+  @apply cursor-pointer underline mx-[0.1rem];
+}
+
+.confirm-btn {
+  @apply w-full h-[1.06667rem] mt-[0.4rem] rounded-[0.53333rem] text-[0.42667rem] font-bold;
+  background-color: var(--main-color);
+  color: var(--text_color_L4);
+}

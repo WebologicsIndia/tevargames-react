@@ -1,73 +1,119 @@
-# React + TypeScript + Vite
+# Tevar Games - Next.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-first gaming platform built with Next.js, React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 3 + CSS Variables
+- **UI Library**: Ant Design 6
+- **Carousel**: Swiper 12
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start development server
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Build for production
+npm run build
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start production server
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app runs at [http://localhost:3000](http://localhost:3000)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+tevargames-react/
+├── app/                     # Next.js App Router pages
+│   ├── globals.css          # Global styles with CSS variables
+│   ├── layout.tsx           # Root layout with providers
+│   ├── providers.tsx        # Ant Design ConfigProvider
+│   ├── page.tsx             # Root redirect to /login
+│   ├── login/               # Login page
+│   ├── register/            # Register page
+│   ├── forgot_reset/        # Forgot password page
+│   ├── (main)/              # Route group with BottomNavbar
+│   │   ├── layout.tsx       # Layout with BottomNavbar
+│   │   ├── home/            # Home page
+│   │   └── activity/        # Activity page
+│   ├── dailytask/           # Activity Award page
+│   ├── rebate/              # Betting Rebate page
+│   ├── jackpot/             # Super Jackpot page
+│   ├── newGift/             # New Member Gift page
+│   ├── redenvelopes/        # Gifts page
+│   ├── attendance/          # Attendance Bonus page
+│   ├── first_deposit_bonus/ # First Deposit Bonus page
+│   ├── newHot/              # New Hot Offer page
+│   ├── aviator_betting_reward/ # Aviator Betting page
+│   ├── youtube/             # Youtube Creator page
+│   ├── winzo/               # Winzo Offer page
+│   ├── promotion/           # Promotion page
+│   ├── wallet/              # Wallet page
+│   └── account/             # Account page
+├── components/              # Shared components
+│   ├── BottomNavbar/        # Bottom navigation bar
+│   ├── Header/              # App header
+│   ├── NotificationPopup/   # Notification modal
+│   ├── EarningChart/        # Earnings leaderboard
+│   ├── SettingRow.tsx       # Settings row component
+│   └── ProviderCard.tsx     # Provider card component
+├── lib/                     # Utilities and constants
+│   └── gameCategories.ts    # Game categories data
+└── public/                  # Static assets
+    ├── assets/              # Images, icons, banners
+    └── whitehjj.png         # App logo
+```
+
+## Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Redirects to `/login` |
+| `/login` | User login |
+| `/register` | User registration |
+| `/forgot_reset` | Password recovery |
+| `/home` | Main home page with games |
+| `/activity` | Activity promotions |
+| `/dailytask` | Daily task rewards |
+| `/rebate` | Betting rebate |
+| `/jackpot` | Super jackpot |
+| `/attendance` | Daily check-in bonus |
+| `/promotion` | Promotions |
+| `/wallet` | User wallet |
+| `/account` | User account |
+
+## Migration from Vite + React Router
+
+This project was migrated from a Vite + React Router setup to Next.js App Router:
+
+- **Routing**: React Router `BrowserRouter` -> Next.js file-based routing
+- **Navigation**: `useNavigate()` -> `useRouter()` from `next/navigation`
+- **Location**: `useLocation()` -> `usePathname()` from `next/navigation`
+- **Layouts**: React Router `<Outlet />` -> Next.js `layout.tsx` with `{children}`
+- **Tailwind**: v4 -> v3 (updated syntax for CSS variables)
+
+## CSS Variables
+
+The app uses CSS variables for theming defined in `app/globals.css`:
+
+```css
+:root {
+  --main-color: #FFD700;
+  --bg_color_L1: #000000;
+  --text_color_L1: #FFD700;
+  --text_color_L2: #ACAFC2;
+  /* ... and more */
+}
+```
+
+## Mobile-First Design
+
+The app is designed for mobile with a fixed width of `10rem` (400px at 40px root font-size). The viewport is set to prevent user scaling for a native app-like experience.
