@@ -17,6 +17,7 @@ import NewHotOffer from "./pages/Activity/Screens/NewHotOffer/NewHotOffer.tsx";
 import AviatorOffer from "./pages/Activity/Screens/NewHotOffer/AviaterOffer.tsx";
 import YoutubeCreator from "./pages/Activity/Screens/NewHotOffer/YoutubeCreator.tsx";
 import WinzoOffer from "./pages/Activity/Screens/NewHotOffer/WinzoOffer.tsx";
+import Promotion from "./pages/Promotion/Promotion.tsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
 
               <Route path="/home" element={<Home />} />
               <Route path="/activity" element={<Activity />} />
+              <Route path="/promotion" element={<Promotion />} />
 
 
               {/* <Route path="/wallet" element={<Wallet />} /> */}
