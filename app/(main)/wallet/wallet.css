@@ -1,0 +1,115 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.wallet-page {
+    @apply w-[10rem] min-h-screen bg-black text-white flex flex-col;
+}
+
+/* TOP BAR */
+.wallet-topbar {
+    @apply relative h-[1.2rem] flex items-center justify-center;
+}
+
+.wallet-back {
+    @apply absolute left-[0.32rem] text-[0.48rem];
+}
+
+.wallet-title {
+    @apply text-[0.48rem] font-semibold;
+}
+
+/* BALANCE */
+.wallet-balance {
+    @apply flex flex-col items-center mt-[0.4rem];
+}
+
+.wallet-icon {
+    @apply text-[0.9rem] text-yellow-400;
+}
+
+.wallet-amount {
+    @apply text-[0.72rem] font-bold mt-[0.16rem];
+}
+
+.wallet-subtitle {
+    @apply text-[0.32rem] text-gray-400;
+}
+
+/* STATS */
+.wallet-stats {
+    @apply flex justify-between px-[0.64rem] mt-[0.8rem];
+}
+
+.wallet-stat {
+    @apply flex flex-col items-center;
+}
+
+.wallet-circle {
+    @apply w-[2.2rem] h-[2.2rem] rounded-full border-[0.16rem] flex items-center justify-center;
+}
+
+.wallet-circle span {
+    @apply text-[0.4rem] text-yellow-400;
+}
+
+.wallet-circle.blue {
+    @apply border-blue-600;
+}
+
+.wallet-circle.yellow {
+    @apply border-yellow-400;
+}
+
+.wallet-stat-amount {
+    @apply text-[0.36rem] text-yellow-400 mt-[0.16rem];
+}
+
+.wallet-stat-label {
+    @apply text-[0.28rem] text-gray-400;
+}
+
+/* BUTTON */
+.wallet-transfer-btn {
+    @apply mx-[0.64rem] mt-[0.6rem] h-[0.96rem] rounded-full
+    bg-yellow-400 text-black text-[0.4rem] font-semibold;
+}
+
+/* ACTIONS */
+.wallet-actions {
+    @apply grid grid-cols-4 gap-[0.32rem] px-[0.64rem] mt-[0.6rem] text-center;
+}
+
+.wallet-action {
+    @apply flex flex-col items-center;
+}
+
+.wallet-action-icon {
+    @apply w-[1.2rem] h-[1.2rem] rounded-full bg-[#222]
+    flex items-center justify-center
+    text-[0.56rem] text-yellow-400;
+}
+
+.wallet-action-label {
+    @apply text-[0.24rem] text-gray-300 mt-[0.12rem] leading-tight;
+}
+
+/* GAMES */
+.wallet-games {
+    @apply grid grid-cols-3 gap-[0.4rem] px-[0.64rem] mt-[0.8rem] opacity-30;
+}
+
+.wallet-game {
+    @apply text-center;
+}
+
+.wallet-game-icon {
+    @apply w-[1.6rem] h-[1.6rem] rounded-full bg-gray-700 mx-auto mb-[0.12rem];
+}
+
+.wallet-game-amount {
+    @apply text-[0.28rem];
+}
+
+.wallet-game-label {
+    @apply text-[0.24rem] text-gray-400;
+}

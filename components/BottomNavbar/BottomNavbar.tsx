@@ -31,7 +31,7 @@ const BottomNavbar = () => {
       </div>
 
       {/* Promotion (center) */}
-      <div className="tabbar__container-item" onClick={() => router.push('/promotion')}>
+      <div className={`tabbar__container-item ${isActive('/promotion')}`} onClick={() => router.push('/promotion')}>
         <GiftOutlined />
         <div className="promotionBg" />
         <span>Promotion</span>

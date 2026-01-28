@@ -1,6 +1,6 @@
 /* ================= CONTAINER ================= */
 .register-container {
-  @apply w-[390px] min-h-screen;
+  @apply w-[390px] min-h-screen overflow-y-auto;
   background-color: var(--bg_color_L1);
   color: var(--text_color_L1);
 }

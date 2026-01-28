@@ -36,13 +36,14 @@ tevargames-react/
 │   ├── globals.css          # Global styles with CSS variables
 │   ├── layout.tsx           # Root layout with providers
 │   ├── providers.tsx        # Ant Design ConfigProvider
-│   ├── page.tsx             # Root redirect to /login
+│   ├── page1.tsx             # Root redirect to /login
 │   ├── login/               # Login page
 │   ├── register/            # Register page
 │   ├── forgot_reset/        # Forgot password page
 │   ├── (main)/              # Route group with BottomNavbar
 │   │   ├── layout.tsx       # Layout with BottomNavbar
 │   │   ├── home/            # Home page
+|   |   ├── promotion/           # Promotion page   
 │   │   └── activity/        # Activity page
 │   ├── dailytask/           # Activity Award page
 │   ├── rebate/              # Betting Rebate page
@@ -55,7 +56,6 @@ tevargames-react/
 │   ├── aviator_betting_reward/ # Aviator Betting page
 │   ├── youtube/             # Youtube Creator page
 │   ├── winzo/               # Winzo Offer page
-│   ├── promotion/           # Promotion page
 │   ├── wallet/              # Wallet page
 │   └── account/             # Account page
 ├── components/              # Shared components
@@ -74,21 +74,22 @@ tevargames-react/
 
 ## Routes
 
-| Route | Description |
-|-------|-------------|
-| `/` | Redirects to `/login` |
-| `/login` | User login |
-| `/register` | User registration |
+| Route           | Description |
+|-----------------|-------------|
+| `/`             | Redirects to `/login` |
+| `/login`        | User login |
+| `/register`     | User registration |
 | `/forgot_reset` | Password recovery |
-| `/home` | Main home page with games |
-| `/activity` | Activity promotions |
-| `/dailytask` | Daily task rewards |
-| `/rebate` | Betting rebate |
-| `/jackpot` | Super jackpot |
-| `/attendance` | Daily check-in bonus |
-| `/promotion` | Promotions |
-| `/wallet` | User wallet |
-| `/account` | User account |
+| `/home`         | Main home page with games |
+| `/activity`     | Activity promotions |
+| `/promotion`    | Activity promotions |
+| `/dailytask`    | Daily task rewards |
+| `/rebate`       | Betting rebate |
+| `/jackpot`      | Super jackpot |
+| `/attendance`   | Daily check-in bonus |
+| `/promotion`    | Promotions |
+| `/wallet`       | User wallet |
+| `/account`      | User account |
 
 ## Migration from Vite + React Router
 
