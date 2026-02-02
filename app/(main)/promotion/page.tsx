@@ -1,9 +1,34 @@
+"use client";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./promotion.css"
+import {useRouter} from "next/navigation";
 
 const Promotion = () => {
-    // const navigate = useNavigate();
+    const router = useRouter();
+
+    const promptionDetails = [
+        {
+            title: "Subordinate data",
+            url: "/promotion/myteam",
+        } ,
+        {
+            title: "Commission detail",
+            url: "/promotion/promotionDes",
+        } ,
+        {
+            title: "Invitation rules",
+            url: "/promotion/tutorial",
+        } ,
+        {
+            title: "Agent line customer service",
+            url: "/agent",
+        } ,
+        {
+            title: "Rebate ratio",
+            url: "/promotion/rebateRadio",
+        }
+    ]
 
     return (
         <div className="promotion-page">
@@ -88,15 +113,11 @@ const Promotion = () => {
                     <span className="right">303683383626</span>
                 </div>
 
-                {[
-                    "Subordinate data",
-                    "Commission detail",
-                    "Invitation rules",
-                    "Agent line customer service",
-                    "Rebate ratio",
-                ].map((item) => (
-                    <div key={item} className="promotion-list-row arrow">
-                        <span className="left">{item}</span>
+                {promptionDetails.map((item) => (
+                    <div key={item.title} className="promotion-list-row arrow"
+                        onClick={() => router.push(item.url)}
+                    >
+                        <span className="left">{item.title}</span>
                         <span className="chevron">›</span>
                     </div>
                 ))}

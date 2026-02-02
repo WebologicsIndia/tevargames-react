@@ -1,0 +1,164 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.sub-page {
+    @apply w-[10rem] min-h-screen bg-black text-white px-[0.32rem];
+}
+
+/* HEADER */
+.sub-header {
+    @apply relative h-[1.2rem] flex items-center justify-center text-yellow-400;
+}
+
+.sub-back {
+    @apply absolute left-[0.32rem] text-[0.48rem] cursor-pointer;
+}
+
+.sub-title {
+    @apply text-[0.52rem] font-semibold;
+}
+
+/* SEARCH */
+.sub-search-row {
+    @apply flex items-center gap-[0.32rem] mt-[0.4rem];
+}
+
+.sub-search-input {
+    @apply flex-1 bg-transparent border-b border-gray-600
+    text-[0.36rem] outline-none text-gray-300;
+}
+
+.sub-search-btn {
+    @apply w-[1.2rem] h-[0.8rem]
+    rounded-full bg-yellow-400
+    flex items-center justify-center text-black;
+}
+
+/* FILTER */
+.sub-filter-row {
+    @apply flex justify-between items-center
+    mt-[0.6rem] text-[0.36rem];
+}
+
+.sub-tier {
+    @apply flex items-center gap-[0.16rem]
+    text-yellow-400 cursor-pointer;
+}
+
+.sub-date {
+    @apply text-gray-300;
+}
+
+/* CARD */
+.sub-card {
+    @apply mt-[0.6rem] rounded-[0.4rem]
+    bg-[#3c4b8c] p-[0.4rem];
+}
+
+.sub-card-grid {
+    @apply grid grid-cols-2 gap-y-[0.48rem];
+}
+
+.sub-stat {
+    @apply text-center;
+}
+
+.sub-stat-value {
+    @apply text-[0.6rem] text-yellow-400;
+}
+
+.sub-stat-label {
+    @apply text-[0.32rem] text-gray-300;
+}
+
+/* USER */
+.sub-user {
+    @apply mt-[0.8rem];
+}
+
+.sub-uid {
+    @apply text-yellow-400 text-[0.44rem]
+    flex items-center gap-[0.24rem]
+    border-b border-gray-700 pb-[0.24rem];
+}
+
+.sub-info-row {
+    @apply flex justify-between
+    text-[0.36rem] text-gray-300
+    py-[0.24rem];
+}
+
+.yellow {
+    @apply text-yellow-400;
+}
+
+.gray {
+    @apply text-gray-400;
+}
+
+/* BOTTOM SHEET */
+/* OVERLAY */
+.tier-overlay {
+    @apply fixed inset-0 bg-black/70
+    flex justify-center items-end;
+}
+
+/* SHEET */
+.tier-sheet {
+    @apply w-[10rem]
+    bg-black
+    rounded-t-[0.4rem]
+    px-[0.4rem]
+    pb-[0.4rem]
+    max-h-[70vh]
+    flex flex-col;
+}
+
+/* ACTION BAR */
+.tier-actions {
+    @apply flex justify-between
+    text-[0.44rem]
+    text-gray-400
+    py-[0.4rem]
+    border-b border-gray-700;
+}
+
+.tier-actions .confirm {
+    @apply text-yellow-400;
+}
+
+/* SCROLLABLE LIST */
+.tier-list {
+    @apply flex-1
+    overflow-y-auto
+    mt-[0.24rem];
+    scrollbar-width: none;
+}
+
+.tier-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* ITEM */
+.tier-item {
+    @apply text-center
+    text-[0.48rem]
+    py-[0.4rem]
+    text-gray-400;
+}
+
+.tier-item.active {
+    @apply text-yellow-400;
+}
+
+.tier-scroll {
+    @apply flex-1
+    overflow-y-auto
+    px-[0.4rem];
+    scrollbar-width: none;
+}
+
+.tier-scroll::-webkit-scrollbar {
+    display: none;
+}
+
