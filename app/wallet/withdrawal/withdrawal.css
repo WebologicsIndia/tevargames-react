@@ -1,0 +1,165 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.withdraw-page {
+    @apply w-[10rem] min-h-screen bg-black text-white p-[0.32rem] overflow-y-auto;
+}
+
+/* HEADER */
+.withdraw-header {
+    @apply relative h-[1.2rem] flex items-center justify-center text-yellow-400;
+}
+
+.withdraw-back {
+    @apply absolute left-[0.32rem] text-[0.48rem] cursor-pointer;
+}
+
+.withdraw-title {
+    @apply text-[0.52rem] font-semibold;
+}
+
+.withdraw-history-link {
+    @apply absolute right-[0.32rem] text-[0.32rem] cursor-pointer;
+}
+
+/* CARD */
+.withdraw-card {
+    @apply mt-[0.4rem] h-[3.46667rem] rounded-[0.4rem]
+    bg-[url('/assets/wallet/TotalAssetsBg-deposit.png')]
+    bg-cover bg-center bg-no-repeat
+    relative p-[0.4rem];
+}
+
+.withdraw-input {
+    @apply flex-1 bg-transparent outline-none
+    text-yellow-400 text-[0.48rem]
+    placeholder-gray-400;
+}
+
+.withdraw-card-top {
+    @apply flex items-center gap-[0.24rem] text-[0.36rem];
+}
+
+.withdraw-wallet-icon {
+    @apply text-yellow-400;
+}
+
+.withdraw-card-amount {
+    @apply mt-[0.32rem] text-[0.8rem] font-bold flex items-center gap-[0.32rem];
+}
+
+/* METHODS */
+.withdraw-methods {
+    @apply flex justify-between mt-[0.6rem] cursor-pointer;
+}
+
+.withdraw-method {
+    @apply w-[4.4rem] h-[2.4rem]
+    rounded-[0.32rem]
+    flex flex-col items-center justify-center
+    gap-[0.24rem]
+    border border-yellow-400
+    text-yellow-400;
+}
+
+.withdraw-method.active {
+    @apply bg-yellow-400 text-black border-none;
+}
+
+.withdraw-method.usdt {
+    @apply border-gray-600 text-gray-300;
+}
+
+.usdt-icon {
+    @apply w-[0.96rem] h-[0.96rem]
+    rounded-full bg-green-500
+    flex items-center justify-center
+    text-black font-bold;
+}
+
+/* ADD BANK */
+.withdraw-add {
+    @apply mt-[0.8rem] flex flex-col items-center;
+}
+
+.withdraw-add-icon {
+    @apply w-[1.6rem] h-[1.6rem]
+    border border-dashed border-gray-500
+    flex items-center justify-center
+    text-[0.6rem];
+}
+
+.withdraw-add-text {
+    @apply mt-[0.32rem] text-[0.36rem] text-gray-300;
+}
+
+.withdraw-warning {
+    @apply mt-[0.32rem] text-center text-red-500 text-[0.32rem];
+}
+
+/* INPUT */
+.withdraw-input-row {
+    @apply mt-[0.8rem] flex items-center gap-[0.32rem]
+    border-b border-yellow-400 pb-[0.16rem];
+}
+
+.withdraw-rs {
+    @apply text-yellow-400 text-[0.64rem];
+}
+
+.withdraw-placeholder {
+    @apply text-yellow-400 text-[0.36rem];
+}
+
+/* BUTTON */
+.withdraw-submit {
+    @apply mt-[0.8rem] h-[1.12rem] w-full
+    rounded-full
+    bg-gradient-to-r from-[#5aa6ff] to-[#3b6fe0]
+    text-black text-[0.48rem] font-semibold
+    opacity-50 cursor-not-allowed;
+}
+
+/* RULES */
+.withdraw-rules {
+    @apply mt-[0.8rem] rounded-[0.4rem]
+    border border-blue-700 p-[0.4rem];
+}
+
+.withdraw-rules ul {
+    @apply list-disc list-inside
+    text-[0.36rem] text-gray-300 space-y-[0.24rem];
+}
+
+.withdraw-rules span {
+    @apply text-red-500;
+}
+
+/* HISTORY EMPTY */
+.withdraw-history-empty {
+    @apply mt-[1rem];
+}
+
+.withdraw-history-title {
+    @apply flex items-center gap-[0.24rem]
+    text-yellow-400 text-[0.48rem] mb-[0.6rem];
+}
+
+.withdraw-empty {
+    @apply flex flex-col items-center text-gray-400;
+}
+
+.empty-illustration {
+    @apply w-[2.4rem] h-[2.4rem]
+    bg-gray-700 rounded-[0.32rem] mb-[0.32rem];
+}
+
+.empty-text {
+    @apply text-[0.36rem];
+}
+
+.withdraw-all-history {
+    @apply mt-[0.8rem] w-full h-[1rem]
+    rounded-full border border-yellow-400
+    text-yellow-400 text-[0.44rem];
+}

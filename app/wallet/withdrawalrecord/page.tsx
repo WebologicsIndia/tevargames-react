@@ -3,7 +3,7 @@
 import { ArrowLeftOutlined, CopyOutlined } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import "./rechargerecord.css";
+import "./withdrawalrecord.css";
 
 const PAYMENT_TYPES = ["All", "UPI-APP", "UPI-Manual", "Bank"];
 
@@ -34,7 +34,7 @@ const PAYMENTS = [
     },
 ];
 
-export default function DepositHistory() {
+export default function WithdrawalHistory() {
     const router = useRouter();
     const [activeType, setActiveType] = useState("All");
 
@@ -50,9 +50,9 @@ export default function DepositHistory() {
             <div className="history-header">
                 <ArrowLeftOutlined
                     className="history-back"
-                    onClick={() => router.push("/wallet/deposit")}
+                    onClick={() => router.push("/wallet/withdrawal")}
                 />
-                <span className="history-title">Deposit history</span>
+                <span className="history-title">Withdrawal history</span>
             </div>
 
             {/* PAYMENT TYPE SCROLL */}
@@ -85,7 +85,7 @@ export default function DepositHistory() {
 
                         {/* STATUS */}
                         <div className="status-row">
-                            <span className="status-pill">Deposit</span>
+                            <span className="status-pill">Withdrawal</span>
                             <span
                                 className={
                                     payment.status === "Complete"

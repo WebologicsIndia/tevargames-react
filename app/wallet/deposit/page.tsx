@@ -25,7 +25,7 @@ export default function Deposit() {
             <div className="deposit-header">
                 <ArrowLeftOutlined className="deposit-back" />
                 <span className="deposit-title">Deposit</span>
-                <div className="deposit-history" onClick={() => router.push("/wallet/rechargerecord")}>Deposit history</div>
+                <div className="deposit-history" onClick={() => router.push("/wallet")}>Deposit history</div>
             </div>
 
             {/* BALANCE CARD */}
