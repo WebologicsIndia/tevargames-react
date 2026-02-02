@@ -111,8 +111,8 @@ export default function Wallet() {
             <div className="wallet-actions">
                 <WalletAction icon={<UploadOutlined />} label="Deposit" navigation="/wallet/deposit"/>
                 <WalletAction icon={<DownloadOutlined />} label="Withdraw" navigation="/wallet/withdrawal"/>
-                <WalletAction icon={<HistoryOutlined />} label="Deposit history" />
-                <WalletAction icon={<HistoryOutlined />} label="Withdrawal history" />
+                <WalletAction icon={<HistoryOutlined />} label="Deposit history" navigation={"/wallet/rechargerecord"} />
+                <WalletAction icon={<HistoryOutlined />} label="Withdrawal history" navigation={"/wallet/withdrawalrecord"}/>
             </div>
 
             {/* GAMES (DIMMED) */}
