@@ -1,0 +1,135 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.deposit-page {
+    @apply w-[10rem] min-h-screen bg-black text-white flex flex-col;
+}
+
+/* HEADER */
+.deposit-header {
+    @apply relative h-[1.2rem] flex items-center justify-center text-yellow-400;
+}
+
+.deposit-back {
+    @apply absolute left-[0.32rem] text-[0.48rem];
+}
+
+.deposit-title {
+    @apply text-[0.48rem] font-semibold;
+}
+
+.deposit-history {
+    @apply absolute right-[0.32rem] text-[0.32rem];
+}
+
+/* CARD */
+.deposit-card {
+    @apply mx-[0.32rem] mt-[0.4rem] h-[3.46667rem] rounded-[0.4rem]
+    bg-[url('/assets/wallet/TotalAssetsBg-deposit.png')]
+    bg-cover bg-center bg-no-repeat
+    relative p-[0.4rem];
+}
+
+.deposit-card-top {
+    @apply flex items-center gap-[0.24rem];
+}
+
+.deposit-wallet-icon {
+    @apply text-[0.48rem] text-yellow-300;
+}
+
+.deposit-card-label {
+    @apply text-[0.36rem];
+}
+
+.deposit-card-amount {
+    @apply text-[0.8rem] font-bold mt-[0.32rem] flex items-center gap-[0.32rem];
+}
+
+.deposit-refresh {
+    @apply text-[0.48rem];
+}
+
+.deposit-card-chip {
+    @apply w-[0.9rem] h-[0.64rem] bg-white/40 rounded-[0.12rem] mt-[0.4rem];
+}
+
+.deposit-card-mask {
+    @apply absolute bottom-[0.32rem] right-[0.4rem] text-[0.36rem] tracking-widest;
+}
+
+/* SECTION TITLE */
+.deposit-section-title {
+    @apply flex items-center gap-[0.24rem]
+    text-yellow-400 text-[0.48rem]
+    mt-[0.6rem] px-[0.32rem];
+}
+
+/* AMOUNTS */
+.deposit-amount-grid {
+    @apply grid grid-cols-3 gap-[0.32rem] px-[0.32rem] mt-[0.32rem];
+}
+
+.deposit-amount-btn {
+    @apply h-[0.96rem] rounded-[0.24rem]
+    border border-blue-500
+    text-[0.48rem]
+    text-yellow-400 flex items-center justify-center gap-[0.16rem];
+}
+
+.deposit-amount-btn span {
+    @apply text-gray-400;
+}
+
+.deposit-amount-btn.active {
+    @apply bg-yellow-400 text-black border-none;
+}
+
+.deposit-amount-btn.active span {
+    @apply text-black;
+}
+
+/* INPUT */
+.deposit-input-row {
+    @apply mx-[0.32rem] mt-[0.6rem]
+    flex items-center justify-between
+    border-b border-yellow-400 pb-[0.16rem];
+}
+
+.deposit-rs {
+    @apply text-yellow-400 text-[0.64rem];
+}
+
+.deposit-input-value {
+    @apply text-yellow-400 text-[0.64rem];
+}
+
+.deposit-clear {
+    @apply text-[0.48rem] text-gray-400;
+}
+
+/* SUBMIT */
+.deposit-submit {
+    @apply mx-[0.32rem] mt-[0.8rem]
+    h-[1.12rem] rounded-full
+    bg-gradient-to-r from-[#ffd84d] to-[#f5c400]
+    text-black text-[0.48rem] font-semibold;
+}
+
+/* INSTRUCTIONS */
+.deposit-instructions-title {
+    @apply flex items-center gap-[0.24rem]
+    text-yellow-400 text-[0.48rem]
+    mt-[1rem] px-[0.32rem];
+}
+
+.deposit-instructions-box {
+    @apply mx-[0.32rem] mt-[0.32rem]
+    border border-blue-600 rounded-[0.32rem]
+    p-[0.4rem];
+}
+
+.deposit-instructions-box ul {
+    @apply list-disc list-inside space-y-[0.24rem]
+    text-[0.32rem] text-gray-300;
+}

@@ -37,7 +37,7 @@
 
 /* STATS */
 .wallet-stats {
-    @apply flex justify-between px-[0.64rem] mt-[0.8rem];
+    @apply flex justify-around px-[0.64rem] mt-[0.8rem];
 }
 
 .wallet-stat {
@@ -71,7 +71,7 @@
 /* BUTTON */
 .wallet-transfer-btn {
     @apply mx-[0.64rem] mt-[0.6rem] h-[0.96rem] rounded-full
-    bg-yellow-400 text-black text-[0.4rem] font-semibold;
+    bg-yellow-400 text-[--van-checkbox-label-color] text-[0.4rem] font-semibold;
 }
 
 /* ACTIONS */
@@ -99,7 +99,7 @@
 }
 
 .wallet-game {
-    @apply text-center;
+    @apply flex flex-col justify-around text-center;
 }
 
 .wallet-game-icon {
@@ -107,9 +107,9 @@
 }
 
 .wallet-game-amount {
-    @apply text-[0.28rem];
+    @apply text-[0.3rem] text-[--text_color_L4] font-semibold;
 }
 
 .wallet-game-label {
-    @apply text-[0.24rem] text-gray-400;
+    @apply text-[0.27rem] text-[--text_color_L4] font-semibold;
 }

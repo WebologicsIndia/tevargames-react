@@ -1,3 +1,4 @@
+"use client"
 import {
     ArrowLeftOutlined,
     WalletOutlined,
@@ -7,14 +8,71 @@ import {
 } from "@ant-design/icons";
 
 import "./wallet.css";
+import {router} from "next/client";
+import { useRouter } from "next/navigation";
+
+const games = [
+    {
+        name: "Lottery",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "TB_Chess",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "Wickets9",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "Jilli",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "PG",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "DG",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "MG",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "JDB",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "SaBa",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+    {
+        name: "CQ9",
+        icon: "/assets/svg/companyLogo_1.svg",
+        amount: 60.00
+    },
+
+]
 
 export default function Wallet() {
+    const router = useRouter();
     return (
         <div className="wallet-page">
 
             {/* TOP BAR */}
             <div className="wallet-topbar">
-                <ArrowLeftOutlined className="wallet-back" />
+                <ArrowLeftOutlined className="wallet-back" onClick={() =>  router.push("/wallet")} />
                 <span className="wallet-title">Wallet</span>
             </div>
 
@@ -51,7 +109,7 @@ export default function Wallet() {
 
             {/* ACTIONS */}
             <div className="wallet-actions">
-                <WalletAction icon={<UploadOutlined />} label="Deposit" />
+                <WalletAction icon={<UploadOutlined />} label="Deposit" navigation="/wallet/deposit"/>
                 <WalletAction icon={<DownloadOutlined />} label="Withdraw" />
                 <WalletAction icon={<HistoryOutlined />} label="Deposit history" />
                 <WalletAction icon={<HistoryOutlined />} label="Withdrawal history" />
@@ -59,11 +117,14 @@ export default function Wallet() {
 
             {/* GAMES (DIMMED) */}
             <div className="wallet-games">
-                {["Lottery", "TB_Chess", "Wickets9", "JILI", "PG", "DG"].map((g) => (
-                    <div key={g} className="wallet-game">
-                        <div className="wallet-game-icon" />
-                        <div className="wallet-game-amount">Rs 60.00</div>
-                        <div className="wallet-game-label">{g}</div>
+                {games.map((game) => (
+                    <div
+                        key={game.name}
+                        className="wallet-game wallet-game-icon bg-cover bg-center bg-no-repeat"
+                        style={{ backgroundImage: `url(${game.icon})` }}
+                    >
+                        <div className="wallet-game-amount">{`Rs ${game.amount}`}</div>
+                        <div className="wallet-game-label">{game.name}</div>
                     </div>
                 ))}
             </div>
@@ -72,9 +133,16 @@ export default function Wallet() {
     );
 }
 
-const WalletAction = ({ icon, label }: any) => (
-    <div className="wallet-action">
-        <div className="wallet-action-icon">{icon}</div>
-        <div className="wallet-action-label">{label}</div>
-    </div>
-);
+const WalletAction = ({ icon, label, navigation }: any) => {
+    const router = useRouter();
+
+    return (
+        <div
+            className="wallet-action cursor-pointer"
+            onClick={() => navigation && router.push(navigation)}
+        >
+            <div className="wallet-action-icon">{icon}</div>
+            <div className="wallet-action-label">{label}</div>
+        </div>
+    );
+};
