@@ -1,0 +1,75 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.rules-page {
+    @apply w-[10rem] min-h-screen bg-black text-white px-[0.32rem] pb-[1rem] overflow-y-auto;
+}
+
+/* HEADER */
+.rules-header {
+    @apply relative h-[1.2rem] flex items-center justify-center text-yellow-400;
+}
+
+.rules-back {
+    @apply absolute left-[0.32rem] text-[0.48rem] cursor-pointer;
+}
+
+.rules-title {
+    @apply text-[0.52rem] font-semibold;
+}
+
+/* HERO */
+.rules-hero {
+    @apply mt-[0.6rem] text-center;
+}
+
+.rules-main-title {
+    @apply text-yellow-400 text-[0.6rem] font-semibold;
+}
+
+.rules-sub-title {
+    @apply text-gray-400 text-[0.36rem] mt-[0.16rem];
+}
+
+/* RULE BLOCK */
+.rule-block {
+    @apply mt-[0.8rem];
+}
+
+.rule-no {
+    @apply text-yellow-400 text-center text-[0.44rem] mb-[0.24rem];
+}
+
+.rule-text {
+    @apply text-gray-300 text-[0.36rem] leading-relaxed;
+}
+
+.rule-text p {
+    @apply mb-[0.24rem];
+}
+
+.rule-link {
+    @apply text-red-500 mt-[0.24rem] inline-block;
+}
+
+/* TABLE */
+.rules-table {
+    @apply mt-[1rem];
+}
+
+.table-header {
+    @apply grid grid-cols-4 bg-[#3c4b8c]
+    text-white text-[0.36rem]
+    px-[0.32rem] py-[0.32rem];
+}
+
+.table-row {
+    @apply grid grid-cols-4 items-center
+    text-[0.36rem]
+    px-[0.32rem] py-[0.32rem]
+    odd:bg-[#2f3b73];
+}
+
+.level {
+    @apply text-yellow-400;
+}
