@@ -22,7 +22,7 @@ const Promotion = () => {
         } ,
         {
             title: "Agent line customer service",
-            url: "/agent",
+            url: "/support",
         } ,
         {
             title: "Rebate ratio",

@@ -1,17 +1,30 @@
 'use client';
+import "./AgentCustomerService.css";
 
-import { ArrowLeftOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/navigation';
+export default function AgentCustomerService() {
+    return (
+        <div className="page-wrapper">
+            <div className="mobile-container">
 
-export default function SupportPage() {
-  const router = useRouter();
-  return (
-    <div className="min-h-screen p-4" style={{ backgroundColor: 'var(--bg_color_L1)', color: 'var(--text_color_L1)' }}>
-      <div className="flex items-center gap-4 mb-4">
-        <ArrowLeftOutlined onClick={() => router.back()} className="cursor-pointer text-xl" />
-        <h1 className="text-xl font-bold">Support</h1>
-      </div>
-      <p style={{ color: 'var(--text_color_L2)' }}>Content coming soon...</p>
-    </div>
-  );
+                {/* HEADER */}
+                <div className="header">
+                    <span className="back-arrow">←</span>
+                    <div className="header-title">Agent line customer service</div>
+                </div>
+
+                {/* BANNER */}
+                <div className="banner">
+                    <img
+                        src="/assets/images/customer-support.png"   // replace with your image
+                        alt="agent"
+                        className="agent-img"
+                    />
+                </div>
+
+                {/* BODY */}
+                <div className="content" />
+
+            </div>
+        </div>
+    );
 }
