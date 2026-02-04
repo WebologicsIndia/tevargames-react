@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import "./RebateRatio.css";
+import {useRouter} from "next/navigation";
 
 const TABS = ["Lottery", "Casino", "Sports", "Running"];
 
@@ -28,6 +29,7 @@ const DATA = [
 ];
 
 export default function RebateRatio() {
+    const router = useRouter();
     const [activeTab, setActiveTab] = useState("Lottery");
 
     return (
@@ -36,7 +38,9 @@ export default function RebateRatio() {
 
                 {/* TOP BAR */}
                 <div className="top-bar">
-                    <span className="back">←</span>
+                   <span className="back" onClick={() => router.back()}>
+            ←
+          </span>
                     <span className="title">Rebate ratio</span>
                 </div>
 
