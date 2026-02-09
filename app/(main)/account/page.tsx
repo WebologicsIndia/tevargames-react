@@ -101,8 +101,8 @@ export default function Account() {
                         <ServiceItem icon={<MessageOutlined />} text="Feedback" />
                         <ServiceItem icon={<NotificationOutlined />} text="Notification" />
                         <ServiceItem icon={<CustomerServiceOutlined />} text="24/7 Customer service" />
-                        <ServiceItem icon={<BookOutlined />} text="Beginner’s Guide" />
-                        <ServiceItem icon={<InfoCircleOutlined />} text="About us" />
+                        <ServiceItem icon={<BookOutlined />} text="Beginner’s Guide" navigation={"/guide"}/>
+                        <ServiceItem icon={<InfoCircleOutlined />} text="About us" navigation={"/about"}/>
                     </div>
 
                     {/* LOGOUT */}
@@ -145,9 +145,11 @@ const ListRow = ({ icon, text, right, badge, navigation }: any) =>  {
     </div>
 )};
 
-const ServiceItem = ({ icon, text }: any) => (
-    <div className="service-item">
+const ServiceItem = ({ icon, text, navigation }: any) => {
+   const router = useRouter();
+    return (
+    <div className="service-item" onClick={() => navigation && router.push(navigation)}>
         {icon}
         <span>{text}</span>
     </div>
-);
+)};
