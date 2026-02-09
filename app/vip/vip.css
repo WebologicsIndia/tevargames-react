@@ -1,0 +1,240 @@
+@reference "tailwindcss";
+
+.vip-page {
+    min-height: 100vh;
+    width: 10rem;
+    background: #000;
+    color: #fff;
+    padding-bottom: 40px;
+    @apply px-[0.4533rem] overflow-y-auto
+
+}
+
+.vip-header {
+    @apply relative text-center
+}
+
+.vip-title {
+    @apply text-[0.48rem] font-semibold
+}
+
+.vip-back {
+    @apply cursor-pointer absolute left-[0.32rem] text-[0.48rem]
+}
+
+/* =========================
+   PROFILE
+========================= */
+.vip-profile {
+    @apply flex items-center gap-[0.32rem] py-[0.32rem]
+}
+
+.vip-avatar {
+    @apply w-[1.86667rem] h-[1.86667rem] rounded-full
+}
+
+.vip-badge {
+    @apply w-[1.33333rem] h-[0.58rem] mb-[0.1333rem]
+}
+
+.vip-name {
+    @apply text-[0.40rem]
+}
+
+/* =========================
+   STATS
+========================= */
+.vip-stats {
+    @apply flex gap-[0.32rem]
+}
+
+.vip-stat {
+    @apply flex-1 rounded-[0.32rem] text-center p-[0.32rem] bg-[#384a8c];
+
+}
+
+.vip-stat-value {
+    @apply text-[0.586rem] font-bold text-[#ffd84d];
+}
+
+.vip-stat-label {
+    @apply mt-[0.16rem] text-[0.373rem] text-[#d0d0d0];
+}
+
+/* =========================
+   NOTICE
+========================= */
+.vip-notice {
+    @apply my-[0.426rem] p-[0.2rem] border border-[#333] rounded-[0.213rem]
+    text-[0.373rem] text-[#ccc] text-center;
+}
+
+/* =========================
+   VIP CARD SCROLL
+========================= */
+.vip-card-scroll {
+    @apply flex gap-[0.426rem] overflow-x-auto  snap-x snap-mandatory;
+}
+
+.vip-card-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.vip-card {
+    @apply relative flex-[0_0_92%] h-[5.86rem] rounded-[0.48rem] p-[0.426rem]
+    text-white bg-cover bg-center snap-center cursor-pointer
+    shadow-[0_8px_20px_rgba(0,0,0,0.5)];
+}
+
+.vip-card.active {
+    @apply outline outline-[2px] outline-[#ffd84d];
+}
+
+/* LEFT ICON */
+.vip-left-icon {
+    @apply w-[0.746rem] h-[0.746rem];
+}
+
+/* RIGHT EMBLEM */
+.vip-emblem {
+    @apply absolute right-[0.426rem] top-[0.426rem] w-[1.92rem];
+}
+
+/* CARD CENTER */
+.vip-card-center {
+    @apply flex flex-col;
+}
+
+.vip-card-header {
+    @apply flex items-center gap-[0.213rem];
+}
+
+.vip-level {
+    @apply text-[0.586rem] font-bold;
+}
+
+.vip-lock {
+    @apply flex items-center gap-[0.16rem] text-[0.373rem] opacity-[0.85];
+}
+
+.vip-lock img {
+    @apply w-[0.373rem];
+}
+
+/* SUB TEXT */
+.vip-sub {
+    @apply mt-[0.213rem] text-[0.373rem];
+}
+
+.vip-chip {
+    @apply inline-block mt-[0.213rem] px-[0.266rem] py-[0.106rem]
+    rounded-[0.373rem] border border-white/60 text-[0.32rem];
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.vip-progress {
+    @apply flex items-center gap-[0.213rem] mt-[0.373rem];
+}
+
+.vip-dot {
+    @apply w-[0.213rem] h-[0.213rem] bg-[#ffd84d] rounded-full;
+}
+
+.vip-track {
+    @apply flex-1 h-[0.213rem] bg-white/35 rounded-[0.16rem] overflow-hidden;
+}
+
+.vip-fill {
+    @apply h-full bg-[#ffd84d];
+}
+
+.vip-progress-text {
+    @apply flex justify-between text-[0.32rem] mt-[0.16rem] opacity-[0.9];
+}
+
+/* =========================
+   BENEFITS
+========================= */
+.vip-benefits-title {
+    @apply mt-[0.64rem] mx-[0.426rem] mb-[0.32rem]
+    text-[0.533rem] font-bold text-[#ffd84d];
+}
+
+.vip-benefit {
+    @apply flex items-center gap-[0.32rem] px-[0.426rem] py-[0.373rem];
+}
+
+.benefit-icon {
+    @apply w-[1.12rem] h-[1.12rem];
+}
+
+.benefit-info {
+    @apply flex-1;
+}
+
+.benefit-title {
+    @apply text-[0.426rem] font-semibold;
+}
+
+.benefit-desc {
+    @apply mt-[0.106rem] text-[0.346rem] text-[#bdbdbd];
+}
+
+.benefit-box {
+    @apply min-w-[1.866rem] px-[0.32rem] py-[0.16rem]
+    rounded-[0.373rem] border border-[#ffd84d]
+    text-[#ffd84d] text-center font-semibold;
+}
+
+.vip-tabs {
+    @apply flex justify-around px-4 pt-4 text-[0.52rem];
+}
+
+.vip-tab {
+    @apply  text-gray-300 relative pb-2 cursor-pointer;
+}
+
+.vip-tab-active {
+    @apply text-yellow-400 border-b-2 border-[#ffd84d] pb-1;
+}
+
+.vip-tab-active::after {
+    content: "";
+    @apply absolute left-0 right-0 bottom-[2px] h-[2px] bg-yellow-400;
+}
+
+/* ===== TITLE SECTION ===== */
+.vip-rules-header {
+    @apply text-center mt-6;
+}
+
+.vip-rules-title {
+    @apply text-yellow-400 text-[1.2rem] font-semibold;
+}
+
+.vip-rules-subtitle {
+    @apply text-gray-400 text-[0.75rem] mt-1;
+}
+
+/* ===== RULE BLOCK ===== */
+.vip-rule {
+    @apply mt-8 px-4;
+}
+
+.vip-rule-divider {
+    @apply w-4 h-[2px] bg-blue-400 mb-4;
+}
+
+.vip-rule-title {
+    @apply text-center text-[0.95rem] font-semibold mb-3;
+}
+
+.vip-rule-text {
+    @apply text-gray-400 text-[0.8rem] leading-relaxed text-center;
+}
+
+.rule-header {
+    @apply text-[0.48rem] font-bold text-[--main-color]
+}

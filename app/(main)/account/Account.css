@@ -1,0 +1,145 @@
+@reference "tailwindcss";
+
+/* PAGE */
+.page-wrapper {
+    @apply min-h-screen bg-neutral-900 flex justify-center;
+}
+
+.mobile-container {
+    width: 10rem;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.scroll-area {
+    @apply flex-1 overflow-y-auto px-[0.45rem] pt-[0.45rem];
+}
+
+/* PROFILE */
+.account-header {
+    @apply flex gap-[0.4rem] mb-[0.6rem];
+}
+
+.avatar {
+    @apply w-[1.5rem] h-[1.5rem] rounded-full object-cover;
+}
+
+.username {
+    @apply text-white text-[0.45rem] font-semibold flex;
+}
+
+.vip-badge {
+    @apply ml-[0.1rem] w-[1.3333rem] h-[0.58667rem];
+}
+
+.uid {
+    @apply bg-yellow-400 text-black text-[0.32rem] rounded-full px-[0.3rem] py-[0.1rem] inline-block mt-[0.15rem];
+}
+
+.last-login {
+    @apply text-gray-400 text-[0.32rem] mt-[0.15rem];
+}
+
+/* BALANCE */
+.balance-card {
+    @apply bg-indigo-900 rounded-[0.6rem] p-[0.5rem] mb-[0.6rem];
+}
+
+.balance-title {
+    @apply text-gray-300;
+}
+
+.balance-amount {
+    @apply text-yellow-400 text-[0.75rem] my-[0.25rem];
+}
+
+.balance-actions {
+    @apply flex justify-between text-yellow-400 text-[0.40rem];
+}
+
+/* SAFE */
+.safe-card {
+    @apply flex justify-between mb-[0.7rem];
+}
+
+.safe-title {
+    @apply text-yellow-400 text-[0.45rem];
+}
+
+.safe-desc {
+    @apply text-gray-400 text-[0.32rem];
+}
+
+.safe-right {
+    @apply text-yellow-400 flex items-center gap-[0.15rem];
+}
+
+/* HISTORY */
+.two-col {
+    @apply grid grid-cols-2 gap-[0.6rem] mb-[0.6rem];
+}
+
+.icon-item {
+    @apply flex gap-[0.3rem] text-yellow-400;
+}
+
+.icon-item .sub {
+    @apply text-gray-400 text-[0.3rem];
+}
+
+/* LIST */
+.list-row {
+    @apply flex items-center gap-[0.3rem] py-[0.45rem] border-t border-neutral-800 text-yellow-400;
+}
+
+.arrow {
+    @apply ml-auto;
+}
+
+.right-text {
+    @apply ml-auto flex items-center gap-[0.15rem];
+}
+
+.badge {
+    @apply ml-auto bg-red-500 text-white text-[0.28rem] rounded-full px-[0.25rem] py-[0.1rem];
+}
+
+.divider {
+    @apply h-[0.3rem];
+}
+
+/* SERVICE */
+.section-title {
+    @apply text-yellow-400 text-[0.45rem] my-[0.4rem];
+}
+
+.service-grid {
+    @apply grid grid-cols-3 gap-[0.6rem] text-yellow-400 text-[0.32rem];
+}
+
+.service-item {
+    @apply flex flex-col items-center gap-[0.2rem] text-center;
+}
+
+/* LOGOUT */
+.logout-btn {
+    @apply w-full my-[1rem] py-[0.45rem] rounded-full border border-yellow-400
+    text-yellow-400 text-[0.45rem] flex justify-center items-center gap-[0.3rem];
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+    @apply h-[1.4rem] bg-indigo-950 flex justify-around items-center text-gray-400;
+}
+
+.bottom-nav .active {
+    @apply text-yellow-400;
+}
+
+.center-btn {
+    @apply w-[1.2rem] h-[1.2rem] bg-blue-400 rounded-full
+    flex items-center justify-center text-white;
+}
