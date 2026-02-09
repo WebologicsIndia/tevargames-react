@@ -97,7 +97,7 @@ export default function Account() {
                     <div className="section-title">Service center</div>
 
                     <div className="service-grid">
-                        <ServiceItem icon={<SettingOutlined />} text="Settings" />
+                        <ServiceItem icon={<SettingOutlined />} text="Settings" navigation={"settings"}/>
                         <ServiceItem icon={<MessageOutlined />} text="Feedback" navigation={"/feedback"}/>
                         <ServiceItem icon={<NotificationOutlined />} text="Notification" navigation={"/login_notification"}/>
                         <ServiceItem icon={<CustomerServiceOutlined />} text="24/7 Customer service" navigation={"/support"}/>
