@@ -1,0 +1,98 @@
+@reference "tailwindcss";
+
+/* ===== PAGE ===== */
+.txn-wrapper {
+    @apply min-h-screen bg-black flex justify-center;
+}
+
+.txn-page {
+    @apply w-[10rem] min-h-screen bg-black text-white relative;
+}
+
+/* ===== HEADER ===== */
+.txn-header {
+    @apply relative flex justify-center items-center py-3;
+}
+
+.txn-title {
+    @apply text-yellow-400 text-[0.48rem] font-semibold;
+}
+
+.txn-back {
+    @apply absolute left-3 text-yellow-400 cursor-pointer;
+}
+
+/* ===== FILTER ===== */
+.txn-filter {
+    @apply flex justify-between items-center px-3 mt-2;
+}
+
+.txn-filter-left {
+    @apply flex items-center gap-1 text-gray-400 text-[0.45rem] cursor-pointer;
+}
+
+.txn-date {
+    @apply bg-blue-900/60 px-3 py-2 rounded-lg
+    text-yellow-400 text-[0.45rem];
+}
+
+/* ===== CARD ===== */
+.txn-card {
+    @apply mt-4 mx-3 ;
+}
+
+.txn-card-header {
+    @apply text-yellow-400 text-[0.5rem] mb-2 bg-[#3b4a8a] rounded-sm p-1;
+}
+
+.txn-row {
+    @apply flex justify-between text-[0.45rem] text-gray-300 my-1;
+}
+
+.txn-negative {
+    @apply text-red-500;
+}
+
+.txn-box {
+    @apply mt-3 h-12 border border-blue-700 rounded-lg;
+}
+
+/* ===== OVERLAY ===== */
+.txn-overlay {
+    @apply fixed inset-0 bg-black/60 flex items-end justify-center;
+}
+
+/* ===== MENU (1/4 SCREEN HEIGHT) ===== */
+.txn-menu {
+    @apply w-[10rem] bg-[#1a1a2a] rounded-t-2xl
+    h-[25vh] flex flex-col;
+}
+
+/* ===== TOP ACTIONS ===== */
+.txn-menu-actions {
+    @apply flex justify-between px-4 py-1
+    border-b border-gray-700;
+}
+
+.txn-cancel {
+    @apply text-gray-400 text-[0.32rem] cursor-pointer;
+}
+
+.txn-confirm {
+    @apply text-yellow-400 text-[0.32rem] cursor-pointer;
+}
+
+/* ===== SCROLLABLE LIST ===== */
+.txn-menu-list {
+    @apply flex-1 overflow-y-auto;
+}
+
+/* ===== MENU ITEM ===== */
+.txn-menu-item {
+    @apply text-center py-1 text-gray-400
+    text-[0.32rem] border-b border-gray-700;
+}
+
+.txn-menu-item.active {
+    @apply text-yellow-400;
+}

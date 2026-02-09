@@ -79,7 +79,7 @@ export default function Account() {
                     {/* HISTORY GRID */}
                     <div className="two-col">
                         <MenuItem icon={<BarChartOutlined />} title="Game History" sub="My game history" navigation={"/game_history"}/>
-                        <MenuItem icon={<SwapOutlined />} title="Transaction" sub="My transaction history" />
+                        <MenuItem icon={<SwapOutlined />} title="Transaction" sub="My transaction history" navigation={"/wallet/transactionHistory"}/>
                         <MenuItem icon={<WalletOutlined />} title="Deposit" sub="My deposit history" />
                         <MenuItem icon={<WalletOutlined />} title="Withdraw" sub="My withdraw history" />
                     </div>
@@ -118,15 +118,20 @@ export default function Account() {
 }
 
 /* small components */
-const MenuItem = ({ icon, title, sub, navigation }: any) => (
-    <div className="icon-item" onClick={() => navigation}>
+const MenuItem = ({ icon, title, sub, navigation }: any) => {
+    const router = useRouter();
+    return (
+    <div className="icon-item"
+         onClick={() => navigation && router.push(navigation)}
+    >
         {icon}
         <div>
             <div className="title">{title}</div>
             <div className="sub">{sub}</div>
         </div>
     </div>
-);
+    )
+};
 
 const ListRow = ({ icon, text, right, badge }: any) => (
     <div className="list-row">

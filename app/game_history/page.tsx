@@ -1,69 +1,77 @@
 "use client";
 
-import { LeftOutlined, DownOutlined } from "@ant-design/icons";
+import { ArrowLeftOutlined, DownOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import "./betHistory.css";
+import { useRouter } from "next/navigation";
+
 
 const GAMES = [
-    { id: "win-go", label: "Win Go", active: false },
-    { id: "trx-win-go", label: "Trx Win Go", active: true },
-    { id: "5d", label: "5D", active: false },
-    { id: "k3", label: "K3", active: false },
+    { id: "wingo", label: "Win Go" },
+    { id: "trx", label: "Trx Win Go" },
+    { id: "5d", label: "5D" },
+    { id: "k3", label: "K3" },
 ];
 
 export default function BetHistory() {
-    const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState("Trx Win Go");
+    const [selectedGame, setSelectedGame] = useState("trx");
+    const [showGameList, setShowGameList] = useState(false);
+    const router = useRouter();
+
+    const handleSelectGame = (gameId: string) => {
+        setSelectedGame(gameId);
+        setShowGameList(false); // hide panel after select
+    };
 
     return (
-        <div className="page-wrapper">
-            <div className="mobile-container">
+        <div className="bet-wrapper">
+            <div className="bet-page">
 
-                {/* HEADER */}
-                <div className="top-bar">
-                    <LeftOutlined
-                        className="back"
-                        onClick={() => window.history.back()}
+                {/* ===== HEADER ===== */}
+                <div className="bet-header">
+                    <ArrowLeftOutlined
+                        className="bet-back cursor-pointer"
+                        onClick={() => router.back()}
                     />
-                    <span className="title">Bet history</span>
+                    <span className="bet-title">Bet history</span>
                 </div>
 
-                {/* FILTER */}
-                <div className="filter-row">
-                    <div className="game-select" onClick={() => setOpen(true)}>
-                        <span>{selected}</span>
+                {/* ===== FILTER ===== */}
+                <div className="bet-filter">
+                    <div
+                        className="bet-game-select cursor-pointer"
+                        onClick={() => setShowGameList(true)}
+                    >
+            <span>
+              {GAMES.find((g) => g.id === selectedGame)?.label}
+            </span>
                         <DownOutlined />
                     </div>
 
-                    <div className="date-pill">02/04/2026</div>
+                    <div className="bet-date">02/09/2026</div>
                 </div>
 
-                {/* EMPTY */}
-                <div className="empty-state">No more</div>
+                {/* ===== EMPTY ===== */}
+                <div className="bet-empty">No more</div>
 
-                {/* OVERLAY */}
-                {open && <div className="overlay" onClick={() => setOpen(false)} />}
-
-                {/* BOTTOM SHEET */}
-                <div className={`bottom-sheet ${open ? "open" : ""}`}>
-                    <div className="sheet-grid">
+                {/* ===== GAME SELECTOR ===== */}
+                {showGameList && (
+                    <div className="bet-game-panel">
                         {GAMES.map((g) => (
                             <div
                                 key={g.id}
-                                className={`sheet-item ${
-                                    selected === g.label ? "active" : ""
+                                onClick={() => handleSelectGame(g.id)}
+                                className={`bet-game-card ${
+                                    selectedGame === g.id
+                                        ? "bet-game-active"
+                                        : "bet-game-inactive"
                                 }`}
-                                onClick={() => {
-                                    setSelected(g.label);
-                                    setOpen(false);
-                                }}
                             >
-                                <div className="sheet-icon" />
-                                <span>{g.label}</span>
+                                {g.label}
                             </div>
                         ))}
                     </div>
-                </div>
+                )}
 
             </div>
         </div>
