@@ -1,17 +1,51 @@
-'use client';
+"use client";
 
-import { ArrowLeftOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/navigation';
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import "./game-statistics.css";
 
-export default function GameStatisticsPage() {
-  const router = useRouter();
-  return (
-    <div className="min-h-screen p-4" style={{ backgroundColor: 'var(--bg_color_L1)', color: 'var(--text_color_L1)' }}>
-      <div className="flex items-center gap-4 mb-4">
-        <ArrowLeftOutlined onClick={() => router.back()} className="cursor-pointer text-xl" />
-        <h1 className="text-xl font-bold">GameStatistics</h1>
-      </div>
-      <p style={{ color: 'var(--text_color_L2)' }}>Content coming soon...</p>
-    </div>
-  );
+const TABS = ["Today", "Yesterday", "This week", "This month"];
+
+export default function GameStatistics() {
+    const router = useRouter();
+    const [activeTab, setActiveTab] = useState("Today");
+
+    return (
+        <div className="gs-wrapper">
+            <div className="gs-page">
+
+                {/* HEADER */}
+                <div className="gs-header">
+                    <ArrowLeftOutlined
+                        className="gs-back"
+                        onClick={() => router.back()}
+                    />
+                    <span className="gs-title">Game statistics</span>
+                </div>
+
+                {/* TABS */}
+                <div className="gs-tabs">
+                    {TABS.map((tab) => (
+                        <div
+                            key={tab}
+                            className={`gs-tab ${
+                                activeTab === tab ? "active" : ""
+                            }`}
+                            onClick={() => setActiveTab(tab)}
+                        >
+                            {tab}
+                        </div>
+                    ))}
+                </div>
+
+                {/* CONTENT */}
+                <div className="gs-content">
+                    <div className="gs-amount">Rs0.00</div>
+                    <div className="gs-label">Total bet</div>
+                </div>
+
+            </div>
+        </div>
+    );
 }

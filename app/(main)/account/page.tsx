@@ -80,17 +80,17 @@ export default function Account() {
                     <div className="two-col">
                         <MenuItem icon={<BarChartOutlined />} title="Game History" sub="My game history" navigation={"/game_history"}/>
                         <MenuItem icon={<SwapOutlined />} title="Transaction" sub="My transaction history" navigation={"/wallet/transactionHistory"}/>
-                        <MenuItem icon={<WalletOutlined />} title="Deposit" sub="My deposit history" />
-                        <MenuItem icon={<WalletOutlined />} title="Withdraw" sub="My withdraw history" />
+                        <MenuItem icon={<WalletOutlined />} title="Deposit" sub="My deposit history" navigation={"/wallet/deposit"}/>
+                        <MenuItem icon={<WalletOutlined />} title="Withdraw" sub="My withdraw history" navigation={"/wallet/withdrawal"} />
                     </div>
 
                     {/* LIST */}
-                    <ListRow icon={<NotificationOutlined />} text="Notification" badge="3" />
+                    <ListRow icon={<NotificationOutlined />} text="Notification" badge="3"  navigation={"/login_notification"}/>
                     <ListRow icon={<GiftOutlined />} text="Gifts" />
 
                     <div className="divider" />
 
-                    <ListRow icon={<BarChartOutlined />} text="Game statistics" />
+                    <ListRow icon={<BarChartOutlined />} text="Game statistics" navigation={"/mian/game_statistics"}/>
                     <ListRow icon={<GlobalOutlined />} text="Language" right="English" />
 
                     {/* SERVICE CENTER */}
@@ -133,15 +133,17 @@ const MenuItem = ({ icon, title, sub, navigation }: any) => {
     )
 };
 
-const ListRow = ({ icon, text, right, badge }: any) => (
-    <div className="list-row">
+const ListRow = ({ icon, text, right, badge, navigation }: any) =>  {
+    const router = useRouter();
+    return (
+    <div className="list-row" onClick={() => router.push(navigation)}>
         {icon}
         <span>{text}</span>
         {badge && <span className="badge">{badge}</span>}
         {right && <span className="right-text">{right} <RightOutlined /></span>}
         {!badge && !right && <RightOutlined className="arrow" />}
     </div>
-);
+)};
 
 const ServiceItem = ({ icon, text }: any) => (
     <div className="service-item">

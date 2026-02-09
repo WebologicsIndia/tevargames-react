@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+/* ===== PAGE ===== */
+.gs-wrapper {
+    @apply min-h-screen bg-black flex justify-center;
+}
+
+.gs-page {
+    @apply w-[10rem] min-h-screen bg-black text-white;
+}
+
+/* ===== HEADER ===== */
+.gs-header {
+    @apply relative flex justify-center items-center py-3;
+}
+
+.gs-title {
+    @apply text-yellow-400 text-[0.6rem] font-semibold;
+}
+
+.gs-back {
+    @apply absolute left-3 text-yellow-400 text-[0.32rem] cursor-pointer;
+}
+
+/* ===== TABS ===== */
+.gs-tabs {
+    @apply flex gap-2 px-3 mt-1 items-center;
+}
+
+.gs-tab {
+    @apply px-1 rounded-sm py-1
+    text-[0.32rem] text-gray-400 text-center
+    cursor-pointer;
+}
+
+.gs-tab.active {
+    @apply bg-yellow-400 text-black font-semibold;
+}
+
+/* ===== CONTENT ===== */
+.gs-content {
+    @apply flex flex-col items-center justify-center mt-16;
+}
+
+.gs-amount {
+    @apply text-yellow-500 text-[0.9rem] font-semibold;
+}
+
+.gs-label {
+    @apply text-gray-400 text-[0.55rem] mt-2;
+}
