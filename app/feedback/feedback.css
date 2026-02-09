@@ -1,0 +1,59 @@
+@reference "tailwindcss";
+
+/* ===== PAGE ===== */
+.fb-wrapper {
+    @apply min-h-screen bg-black flex justify-center overflow-y-auto;
+}
+
+.fb-page {
+    @apply w-[10rem] min-h-screen bg-black text-white
+    flex flex-col justify-between;
+}
+
+/* ===== HEADER ===== */
+.fb-header {
+    @apply relative flex justify-center items-center py-3;
+}
+
+.fb-title {
+    @apply text-yellow-400 text-[0.6rem] font-semibold;
+}
+
+.fb-back {
+    @apply absolute left-3 text-yellow-400 text-[0.7rem] cursor-pointer;
+}
+
+/* ===== INPUT ===== */
+.fb-input-wrapper {
+    @apply px-3 mt-2;
+}
+
+.fb-textarea {
+    @apply w-full h-24 bg-black text-gray-400
+    text-[0.45rem] leading-relaxed
+    outline-none resize-none;
+}
+
+/* ===== CENTER ===== */
+.fb-center {
+    @apply flex flex-col items-center justify-center text-center px-3;
+}
+
+.fb-highlight {
+    @apply text-yellow-400 text-[0.55rem] font-semibold;
+}
+
+.fb-sub {
+    @apply text-yellow-400 text-[0.45rem] mt-1;
+}
+
+.fb-image {
+    @apply w-36 mt-4;
+}
+
+/* ===== SUBMIT ===== */
+.fb-submit {
+    @apply mx-1 mb-2 py-1 rounded-full
+    bg-yellow-400 text-black
+    text-[0.4rem];
+}

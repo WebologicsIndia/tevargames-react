@@ -1,17 +1,59 @@
-'use client';
+"use client";
 
-import { ArrowLeftOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/navigation';
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import "./feedback.css";
 
-export default function FeedbackPage() {
-  const router = useRouter();
-  return (
-    <div className="min-h-screen p-4" style={{ backgroundColor: 'var(--bg_color_L1)', color: 'var(--text_color_L1)' }}>
-      <div className="flex items-center gap-4 mb-4">
-        <ArrowLeftOutlined onClick={() => router.back()} className="cursor-pointer text-xl" />
-        <h1 className="text-xl font-bold">Feedback</h1>
-      </div>
-      <p style={{ color: 'var(--text_color_L2)' }}>Content coming soon...</p>
-    </div>
-  );
+export default function Feedback() {
+    const router = useRouter();
+    const [text, setText] = useState("");
+
+    return (
+        <div className="fb-wrapper">
+            <div className="fb-page">
+
+                {/* HEADER */}
+                <div className="fb-header">
+                    <ArrowLeftOutlined
+                        className="fb-back"
+                        onClick={() => router.back()}
+                    />
+                    <span className="fb-title">Feedback</span>
+                </div>
+
+                {/* TEXT INPUT */}
+                <div className="fb-input-wrapper">
+          <textarea
+              className="fb-textarea"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder="Welcome to feedback, please give feedback-please describe the problem in detail when providing feedback, preferably attach a screenshot of the problem you encountered, we will immediately process your feedback!"
+          />
+                </div>
+
+                {/* CENTER CONTENT */}
+                <div className="fb-center">
+                    <div className="fb-highlight">
+                        Send helpful feedback
+                    </div>
+                    <div className="fb-sub">
+                        Chance to win Mystery Rewards
+                    </div>
+
+                    <img
+                        src="/assets/images/feedbackImg.png"
+                        alt="feedback"
+                        className="fb-image"
+                    />
+                </div>
+
+                {/* SUBMIT */}
+                <button className="fb-submit">
+                    Submit
+                </button>
+
+            </div>
+        </div>
+    );
 }
